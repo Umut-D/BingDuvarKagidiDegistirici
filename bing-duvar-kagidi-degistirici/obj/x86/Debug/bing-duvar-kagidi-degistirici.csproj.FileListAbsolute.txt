@@ -1,0 +1,9 @@
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\bin\x86\Debug\bing-duvar-kagidi-degistirici.exe
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\bin\x86\Debug\bing-duvar-kagidi-degistirici.pdb
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.csprojResolveAssemblyReference.cache
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.FrmBing.resources
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.Properties.Resources.resources
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.csproj.GenerateResource.Cache
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.exe
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.pdb
+D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.FrmAyarlar.resources
