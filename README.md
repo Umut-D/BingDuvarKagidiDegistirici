@@ -1,7 +1,7 @@
 #Bing Duvar Kağidi Değistirici
 ##Hakkında
 Bing.com adlı web sitesinden günlük duvar kağıtlarını indiren ve mevcut (Windows) işletim sistemine duvar kağıdı olarak atayan program.
-#Versiyon ve Değişiklikler
+##Versiyon ve Değişiklikler
     v2.00
 <ul>
   <li>Kaynak kodlar yeniden yazıldı.</li>
