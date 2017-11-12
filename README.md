@@ -1,4 +1,4 @@
-# Bing Duvar Kağıdı Değiştiricisi (2.1)
+# Bing Duvar Kağıdı Değiştiricisi
 
 <img src="https://img.shields.io/badge/Lisans-GPL-blue.svg?style=flat" alt="Lisans" /> <img src="https://img.shields.io/badge/Durum-Devam Ediyor-yellow.svg?style=flat" alt="Devam Ediyor" /> <img src="https://img.shields.io/badge/Versiyon-2.1-green.svg?style=flat" alt="Versiyon" />
 
