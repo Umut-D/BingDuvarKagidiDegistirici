@@ -7,3 +7,14 @@ D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degi
 D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.exe
 D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.pdb
 D:\Belgelerim\Programlar\C#\bing-duvar-kagidi-degistirici\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.FrmAyarlar.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.exe
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.pdb
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\bin\x86\Debug\bing-duvar-kagidi-degistirici.exe
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\bin\x86\Debug\bing-duvar-kagidi-degistirici.pdb
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.csprojResolveAssemblyReference.cache
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.Formlar.FrmAyarlar.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.Formlar.FrmBing.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.Formlar.FrmHakkinda.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.Properties.Resources.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing_duvar_kagidi_degistirici.Formlar.FrmUlkeSec.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Debug\bing-duvar-kagidi-degistirici.csproj.GenerateResource.Cache

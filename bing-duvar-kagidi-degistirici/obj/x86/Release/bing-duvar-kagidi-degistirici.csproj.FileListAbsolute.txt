@@ -15,3 +15,14 @@ D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-ka
 D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.FrmBing.resources
 D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.Properties.Resources.resources
 D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\x86\Release\bing-duvar-kagidi-degistirici.csproj.GenerateResource.Cache
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\bin\x86\Release\bing-duvar-kagidi-degistirici.exe
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\bin\x86\Release\bing-duvar-kagidi-degistirici.pdb
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.Formlar.FrmAyarlar.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.Formlar.FrmBing.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.Formlar.FrmHakkinda.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.Properties.Resources.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing_duvar_kagidi_degistirici.Formlar.FrmUlkeSec.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing-duvar-kagidi-degistirici.csproj.GenerateResource.Cache
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing-duvar-kagidi-degistirici.exe
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing-duvar-kagidi-degistirici.pdb
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici-master\bing-duvar-kagidi-degistirici\obj\x86\Release\bing-duvar-kagidi-degistirici.csprojResolveAssemblyReference.cache

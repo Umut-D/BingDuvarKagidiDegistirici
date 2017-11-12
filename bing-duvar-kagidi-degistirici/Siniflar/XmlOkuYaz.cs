@@ -3,15 +3,18 @@ using System.IO;
 using System.Text;
 using System.Xml;
 
-namespace bing_duvar_kagidi_degistirici
+namespace bing_duvar_kagidi_degistirici.Siniflar
 {
     internal class XmlOkuYaz
     {
         // Değişken alanı
-        private readonly XmlDocument _xmlOku = new XmlDocument();
         public bool AyarlarBaslangic, AyarlarOtomatikDegistir;
-        public DateTime AyarlarGirilenSaat;
+        public DateTime AyarlarSaat;
+        public string AyarlarSeciliUlke;
         private readonly string _dizin = AppDomain.CurrentDomain.BaseDirectory + @"\ayarlar.xml";
+
+        // Sınıf alanı
+        private readonly XmlDocument _xmlOku = new XmlDocument();
 
         public void XmlDurumu()
         {
@@ -22,13 +25,14 @@ namespace bing_duvar_kagidi_degistirici
                 {
                     _xmlOku.Load(_dizin);
 
-                    // Değerlerde sorun yoksa oku
-                    AyarlarBaslangic = Convert.ToBoolean(_xmlOku.SelectSingleNode(@"ayarlar/baslangic").InnerText);
-                    AyarlarOtomatikDegistir = Convert.ToBoolean(_xmlOku.SelectSingleNode(@"ayarlar/otomatikDegistir").InnerText);
-                    AyarlarGirilenSaat = Convert.ToDateTime(_xmlOku.SelectSingleNode(@"ayarlar/girilenSaat").InnerText);
+                    // Değerlerde bir sorun yoksa tek tek oku (? ile C# 6.0 ile gelen Conditional Access kullandım)
+                    AyarlarBaslangic = Convert.ToBoolean(_xmlOku.SelectSingleNode(@"ayarlar/baslangic")?.InnerText);
+                    AyarlarOtomatikDegistir = Convert.ToBoolean(_xmlOku.SelectSingleNode(@"ayarlar/otomatikDegistir")?.InnerText);
+                    AyarlarSaat = Convert.ToDateTime(_xmlOku.SelectSingleNode(@"ayarlar/girilenSaat")?.InnerText);
+                    AyarlarSeciliUlke = _xmlOku.SelectSingleNode(@"ayarlar/ulke")?.InnerText;
                 }
 
-                // Eğer ayarlar.xml yoksa, yeni ayarlar.xml oluştur. İçini doldur
+                // Eğer ayarlar.xml yoksa, yeni ayarlar.xml oluştur. İçini varsayılan bilgilerle doldur
                 else
                 {
                     File.Create(_dizin).Close();
@@ -50,6 +54,10 @@ namespace bing_duvar_kagidi_degistirici
 
                     xmlYaz.WriteStartElement("girilenSaat");
                     xmlYaz.WriteString("11:11");
+                    xmlYaz.WriteEndElement();
+
+                    xmlYaz.WriteStartElement("ulke");
+                    xmlYaz.WriteString("Türkiye");
                     xmlYaz.WriteEndElement();
 
                     xmlYaz.WriteEndElement();

@@ -1,4 +1,4 @@
-﻿namespace bing_duvar_kagidi_degistirici
+﻿namespace bing_duvar_kagidi_degistirici.Formlar
 {
     partial class FrmBing
     {
@@ -41,6 +41,7 @@
             this.tsmBing = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmGuncelle = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHakkinda = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSeciliUlke = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tssDurum = new System.Windows.Forms.ToolStripStatusLabel();
             this.pbox = new System.Windows.Forms.PictureBox();
@@ -62,11 +63,12 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiDosya,
             this.tsmiDuvarKagidi,
-            this.tsmiBilgi});
+            this.tsmiBilgi,
+            this.tsmiSeciliUlke});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(889, 32);
+            this.menuStrip.Size = new System.Drawing.Size(1002, 32);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -147,16 +149,24 @@
             this.tsmHakkinda.Text = "Hakkında";
             this.tsmHakkinda.Click += new System.EventHandler(this.tsmHakkinda_Click);
             // 
+            // tsmiSeciliUlke
+            // 
+            this.tsmiSeciliUlke.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsmiSeciliUlke.Font = new System.Drawing.Font("Calibri", 9.969231F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tsmiSeciliUlke.Name = "tsmiSeciliUlke";
+            this.tsmiSeciliUlke.Size = new System.Drawing.Size(12, 26);
+            this.tsmiSeciliUlke.Click += new System.EventHandler(this.tsmiSeciliUlke_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(22, 22);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssDurum});
-            this.statusStrip.Location = new System.Drawing.Point(0, 512);
+            this.statusStrip.Location = new System.Drawing.Point(0, 574);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip.Size = new System.Drawing.Size(889, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1002, 22);
             this.statusStrip.TabIndex = 2;
             // 
             // tssDurum
@@ -170,7 +180,7 @@
             this.pbox.Location = new System.Drawing.Point(0, 32);
             this.pbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbox.Name = "pbox";
-            this.pbox.Size = new System.Drawing.Size(889, 502);
+            this.pbox.Size = new System.Drawing.Size(1002, 564);
             this.pbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbox.TabIndex = 1;
             this.pbox.TabStop = false;
@@ -218,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 534);
+            this.ClientSize = new System.Drawing.Size(1002, 596);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.pbox);
             this.Controls.Add(this.menuStrip);
@@ -226,10 +236,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(640, 480);
+            this.MinimumSize = new System.Drawing.Size(1020, 645);
             this.Name = "FrmBing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bing Duvar Kağıdı Değiştirici (V2)";
+            this.Text = "Bing Duvar Kağıdı Değiştirici 2.1";
             this.Load += new System.EventHandler(this.FrmBing_Load);
             this.Resize += new System.EventHandler(this.FrmBing_Resize);
             this.menuStrip.ResumeLayout(false);
@@ -264,6 +274,7 @@
         private System.Windows.Forms.ToolStripMenuItem cmsGoster;
         private System.Windows.Forms.ToolStripMenuItem cmsKapat;
         private System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.ToolStripMenuItem tsmiSeciliUlke;
     }
 }
 
