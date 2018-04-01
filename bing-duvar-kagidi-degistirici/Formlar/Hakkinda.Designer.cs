@@ -52,9 +52,9 @@
             this.lblHakkindaVersiyon.AutoSize = true;
             this.lblHakkindaVersiyon.Location = new System.Drawing.Point(325, 12);
             this.lblHakkindaVersiyon.Name = "lblHakkindaVersiyon";
-            this.lblHakkindaVersiyon.Size = new System.Drawing.Size(63, 22);
+            this.lblHakkindaVersiyon.Size = new System.Drawing.Size(72, 22);
             this.lblHakkindaVersiyon.TabIndex = 1;
-            this.lblHakkindaVersiyon.Text = "ver. 2.1";
+            this.lblHakkindaVersiyon.Text = "ver. 2.11";
             // 
             // lblHakkindaBilgi
             // 
@@ -74,7 +74,7 @@
             this.llblHakkinda.Size = new System.Drawing.Size(464, 27);
             this.llblHakkinda.TabIndex = 5;
             this.llblHakkinda.TabStop = true;
-            this.llblHakkinda.Text = "Umut D. | Açık kaynak lisanslı (GPL) olarak kodlanmıştır | 2017";
+            this.llblHakkinda.Text = "Umut D. | Açık kaynak lisanslı (GPL) olarak kodlanmıştır | 2018";
             this.llblHakkinda.UseCompatibleTextRendering = true;
             this.llblHakkinda.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblHakkinda_LinkClicked);
             // 

@@ -203,15 +203,15 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
                 DuzenliHtmlLink = BingWebAdresi + DuzenliHtmlLink.Substring(0, DuzenliHtmlLink.LastIndexOf("_", StringComparison.Ordinal)) + ekranCozunurlugu;
 
                 // 5. HTML'den duvar kağıdı bilgisini ayıkla (Bir sonraki versiyonda Regex ile alsam iyi olur)
-                _bilgiBaslangic = HtmlOku.IndexOf("copyright", StringComparison.Ordinal) + "copyright=".Length;
-                _bilgiBitis = HtmlOku.IndexOf("copyrightlink", StringComparison.Ordinal);
+                _bilgiBaslangic = HtmlOku.IndexOf("copyright\":\"", StringComparison.Ordinal) + "copyright\":\" = ".Length;
+                _bilgiBitis = HtmlOku.IndexOf(",\"copyrightlink", StringComparison.Ordinal);
 
-                DuzenliBilgi = HtmlOku.Substring(_bilgiBaslangic + 2, (_bilgiBitis) - _bilgiBaslangic - 5);
+                DuzenliBilgi = HtmlOku.Substring(_bilgiBaslangic -3, (_bilgiBitis) - _bilgiBaslangic+2);
 
                 // 6. Farklı karakterlerin kodlamasını düzelt (UTF8)
                 var bytes = Encoding.Default.GetBytes(DuzenliBilgi);
                 DuzenliBilgi = Encoding.UTF8.GetString(bytes);
-
+                
                 // 7. Duvar kağıdını images klasörünün içine at, klasör yoksa oluştur
                 if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "images"))
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "images");
