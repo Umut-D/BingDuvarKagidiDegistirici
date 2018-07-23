@@ -54,7 +54,7 @@
             this.lblHakkindaVersiyon.Name = "lblHakkindaVersiyon";
             this.lblHakkindaVersiyon.Size = new System.Drawing.Size(72, 22);
             this.lblHakkindaVersiyon.TabIndex = 1;
-            this.lblHakkindaVersiyon.Text = "ver. 2.11";
+            this.lblHakkindaVersiyon.Text = "ver. 2.12";
             // 
             // lblHakkindaBilgi
             // 

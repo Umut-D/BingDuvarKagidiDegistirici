@@ -33,7 +33,7 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
                             string versiyonNo = xmlOku.GetAttribute("version");
 
                             //Versiyon güncellemelerinde bu alana dikkat!
-                            if (versiyonNo == "2.11")
+                            if (versiyonNo == "2.12")
                             {
                                 MessageBox.Show(@"Program günceldir. Yeni versiyon çıkana kadar şimdilik en iyisi bu.", @"Güncelle", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }

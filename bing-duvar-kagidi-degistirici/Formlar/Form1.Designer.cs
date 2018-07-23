@@ -239,7 +239,7 @@
             this.MinimumSize = new System.Drawing.Size(1020, 645);
             this.Name = "FrmBing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bing Duvar Kağıdı Değiştirici 2.11";
+            this.Text = "Bing Duvar Kağıdı Değiştirici 2.12";
             this.Load += new System.EventHandler(this.FrmBing_Load);
             this.Resize += new System.EventHandler(this.FrmBing_Resize);
             this.menuStrip.ResumeLayout(false);
