@@ -141,13 +141,13 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
         public static void DuvarKagidiOlustur(Uri uri, Konumlandirma stil)
         {
             var webAkis = new WebClient().OpenRead(uri.ToString());
-
+                        
             // Gelen veri boş değilse eyleme geç
             if (webAkis != null)
             {
                 var bingGorsel = Image.FromStream(webAkis);
                 var geciciDizin = Path.Combine(Path.GetTempPath(), "BingWP.bmp");
-                bingGorsel.Save(geciciDizin, ImageFormat.Bmp);
+                bingGorsel.Save(geciciDizin, ImageFormat.Bmp);                
 
                 // Regedit'teki ilgili ayarı açarak okuma yap
                 RegistryKey anahtar = Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true);
@@ -188,13 +188,13 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
         public void DuvarKagidiIndirVeYukle(PictureBox pbox, string ekranCozunurlugu)
         {
             try
-            {
+            {                
                 pbox.InitialImage = null;
 
                 // 1. HTML sayfa kodunu (seçilen web sitesine göre) indir
                 WebClient webIstemicisi = new WebClient();
                 HtmlOku = webIstemicisi.DownloadString(SecilenSiteAdresi);
-
+                
                 // 3. HTML'den duvar kağıdı linkini ayıkla 
                 EslestirilenLink[0] = Regex.Match(HtmlOku, "(\\S+?)\\.(jpg)");
 
@@ -205,12 +205,12 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
                 // 5. HTML'den duvar kağıdı bilgisini ayıkla (Bir sonraki versiyonda Regex ile alsam iyi olur)
                 _bilgiBaslangic = HtmlOku.IndexOf("copyright\":\"", StringComparison.Ordinal) + "copyright\":\" = ".Length;
                 _bilgiBitis = HtmlOku.IndexOf(",\"copyrightlink", StringComparison.Ordinal);
-                DuzenliBilgi = HtmlOku.Substring(_bilgiBaslangic - 3, (_bilgiBitis) - _bilgiBaslangic + 2);
+                DuzenliBilgi = HtmlOku.Substring(_bilgiBaslangic -3, (_bilgiBitis) - _bilgiBaslangic+2);
 
                 // 6. Farklı karakterlerin kodlamasını düzelt (UTF8)
                 var bytes = Encoding.Default.GetBytes(DuzenliBilgi);
                 DuzenliBilgi = Encoding.UTF8.GetString(bytes);
-
+                
                 // 7. Duvar kağıdını images klasörünün içine at, klasör yoksa oluştur
                 if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "images"))
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "images");
@@ -267,7 +267,7 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
                 Image gorsel = Image.FromStream(gelenAkis);
                 Image thumbnail = gorsel.GetThumbnailImage(200, 113, () => false, IntPtr.Zero);
                 pbox.Image = thumbnail;
-            }
+            }            
         }
     }
 }

@@ -1,6 +1,6 @@
 # Bing Duvar Kağıdı Değiştiricisi
 
-<img src="https://img.shields.io/badge/Lisans-GPL-blue.svg?style=flat" alt="Lisans" /> <img src="https://img.shields.io/badge/Durum-Devam Ediyor-yellow.svg?style=flat" alt="Devam Ediyor" /> <img src="https://img.shields.io/badge/Versiyon-2.12-green.svg?style=flat" alt="Versiyon" />
+<img src="https://img.shields.io/badge/Lisans-GPL-blue.svg?style=flat" alt="Lisans" /> <img src="https://img.shields.io/badge/Durum-Devam Ediyor-yellow.svg?style=flat" alt="Devam Ediyor" /> <img src="https://img.shields.io/badge/Versiyon-2.1-green.svg?style=flat" alt="Versiyon" />
 
 Bing.com adlı web sitesinden günlük duvar kağıtlarını indiren ve mevcut (Windows) işletim sistemine duvar kağıdı olarak atayan program. 
 
