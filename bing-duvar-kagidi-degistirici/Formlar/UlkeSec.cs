@@ -2,9 +2,9 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using bing_duvar_kagidi_degistirici.Siniflar;
+using BingDuvarKagidi.Siniflar;
 
-namespace bing_duvar_kagidi_degistirici.Formlar
+namespace BingDuvarKagidi.Formlar
 {
     public partial class FrmUlkeSec : Form
     {
@@ -221,21 +221,6 @@ namespace bing_duvar_kagidi_degistirici.Formlar
         {
             _frmAyarlar.UlkeSeciminiKaydet("Yeni Zelanda");
             Close();
-        }
-
-        private void pboxAvusturalya_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pboxAvusturalya_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pboxAvusturalya_MouseLeave(object sender, EventArgs e)
-        {
-
         }
     }
 }

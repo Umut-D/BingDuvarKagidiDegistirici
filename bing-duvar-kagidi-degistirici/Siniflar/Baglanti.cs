@@ -3,11 +3,11 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace bing_duvar_kagidi_degistirici.Siniflar
+namespace BingDuvarKagidi.Siniflar
 {
     internal class Baglanti
     {
-        // İnternet bağlatısını kontrol etmek için wininet.dll'yi kullanmak ve işletim sistemi kaynaklarına erişmek gerek
+        // İnternet bağlatısını kontrol etmek için wininet.dll'yi kullanıp işletim sistemi kaynaklarına eriş
         [DllImport("wininet.dll", CharSet = CharSet.Auto)]
         private static extern bool InternetGetConnectedState(ref InternetConnectionStateFlags lpdwFlags, int dwReserved);
 
@@ -22,12 +22,11 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
             INTERNET_CONNECTION_CONFIGURED = 0x40
         }
 
-        public void BaglantiyiKontrolEt(ToolStripStatusLabel tssDurum)
+        public void BaglantiKontrol(ToolStripStatusLabel tssDurum)
         {
             InternetConnectionStateFlags flags = 0;
             bool baglantiDurumu = InternetGetConnectedState(ref flags, 0);
 
-            // Mevcut bağlantı durumuna göre kullanıcıya bilgilendirme yap
             if (baglantiDurumu)
             {
                 tssDurum.Text = @"İnternet bağlantınız var. Duvar kağıdını indirebilirsiniz.";

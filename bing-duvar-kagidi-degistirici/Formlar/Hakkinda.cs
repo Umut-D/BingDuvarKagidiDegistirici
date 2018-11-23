@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace bing_duvar_kagidi_degistirici.Formlar
+namespace BingDuvarKagidi.Formlar
 {
     public partial class FrmHakkinda : Form
     {
@@ -13,7 +13,7 @@ namespace bing_duvar_kagidi_degistirici.Formlar
         private void llblHakkinda_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Umutd.com anasayfasına dallan
-            Process.Start(@"http://www.umutd.com");
+            Process.Start(@"https://www.umutd.com");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace bing_duvar_kagidi_degistirici.Formlar
+﻿namespace BingDuvarKagidi.Formlar
 {
     partial class FrmBing
     {
@@ -68,7 +68,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(1002, 32);
+            this.menuStrip.Size = new System.Drawing.Size(1002, 33);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -78,20 +78,20 @@
             this.tsmAyarlar,
             this.tsmKapat});
             this.tsmiDosya.Name = "tsmiDosya";
-            this.tsmiDosya.Size = new System.Drawing.Size(67, 26);
+            this.tsmiDosya.Size = new System.Drawing.Size(70, 27);
             this.tsmiDosya.Text = "Dosya";
             // 
             // tsmAyarlar
             // 
             this.tsmAyarlar.Name = "tsmAyarlar";
-            this.tsmAyarlar.Size = new System.Drawing.Size(141, 28);
+            this.tsmAyarlar.Size = new System.Drawing.Size(146, 28);
             this.tsmAyarlar.Text = "Ayarlar";
             this.tsmAyarlar.Click += new System.EventHandler(this.tsmAyarlar_Click);
             // 
             // tsmKapat
             // 
             this.tsmKapat.Name = "tsmKapat";
-            this.tsmKapat.Size = new System.Drawing.Size(141, 28);
+            this.tsmKapat.Size = new System.Drawing.Size(146, 28);
             this.tsmKapat.Text = "Kapat";
             this.tsmKapat.Click += new System.EventHandler(this.tsmKapat_Click);
             // 
@@ -101,20 +101,20 @@
             this.tsmIndir,
             this.tsmDegistir});
             this.tsmiDuvarKagidi.Name = "tsmiDuvarKagidi";
-            this.tsmiDuvarKagidi.Size = new System.Drawing.Size(112, 26);
+            this.tsmiDuvarKagidi.Size = new System.Drawing.Size(119, 27);
             this.tsmiDuvarKagidi.Text = "Duvar Kağıdı";
             // 
             // tsmIndir
             // 
             this.tsmIndir.Name = "tsmIndir";
-            this.tsmIndir.Size = new System.Drawing.Size(144, 28);
+            this.tsmIndir.Size = new System.Drawing.Size(149, 28);
             this.tsmIndir.Text = "İndir";
             this.tsmIndir.Click += new System.EventHandler(this.tsmIndir_Click);
             // 
             // tsmDegistir
             // 
             this.tsmDegistir.Name = "tsmDegistir";
-            this.tsmDegistir.Size = new System.Drawing.Size(144, 28);
+            this.tsmDegistir.Size = new System.Drawing.Size(149, 28);
             this.tsmDegistir.Text = "Değiştir";
             this.tsmDegistir.Click += new System.EventHandler(this.tsmDegistir_Click);
             // 
@@ -125,27 +125,27 @@
             this.tsmGuncelle,
             this.tsmHakkinda});
             this.tsmiBilgi.Name = "tsmiBilgi";
-            this.tsmiBilgi.Size = new System.Drawing.Size(52, 26);
+            this.tsmiBilgi.Size = new System.Drawing.Size(53, 27);
             this.tsmiBilgi.Text = "Bilgi";
             // 
             // tsmBing
             // 
             this.tsmBing.Name = "tsmBing";
-            this.tsmBing.Size = new System.Drawing.Size(195, 28);
+            this.tsmBing.Size = new System.Drawing.Size(200, 28);
             this.tsmBing.Text = "Bing.com\'a Git";
             this.tsmBing.Click += new System.EventHandler(this.tsmBing_Click);
             // 
             // tsmGuncelle
             // 
             this.tsmGuncelle.Name = "tsmGuncelle";
-            this.tsmGuncelle.Size = new System.Drawing.Size(195, 28);
+            this.tsmGuncelle.Size = new System.Drawing.Size(200, 28);
             this.tsmGuncelle.Text = "Güncelle";
             this.tsmGuncelle.Click += new System.EventHandler(this.tsmGuncelle_Click);
             // 
             // tsmHakkinda
             // 
             this.tsmHakkinda.Name = "tsmHakkinda";
-            this.tsmHakkinda.Size = new System.Drawing.Size(195, 28);
+            this.tsmHakkinda.Size = new System.Drawing.Size(200, 28);
             this.tsmHakkinda.Text = "Hakkında";
             this.tsmHakkinda.Click += new System.EventHandler(this.tsmHakkinda_Click);
             // 
@@ -154,7 +154,7 @@
             this.tsmiSeciliUlke.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsmiSeciliUlke.Font = new System.Drawing.Font("Calibri", 9.969231F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tsmiSeciliUlke.Name = "tsmiSeciliUlke";
-            this.tsmiSeciliUlke.Size = new System.Drawing.Size(12, 26);
+            this.tsmiSeciliUlke.Size = new System.Drawing.Size(12, 27);
             this.tsmiSeciliUlke.Click += new System.EventHandler(this.tsmiSeciliUlke_Click);
             // 
             // statusStrip
@@ -177,10 +177,10 @@
             // pbox
             // 
             this.pbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbox.Location = new System.Drawing.Point(0, 32);
+            this.pbox.Location = new System.Drawing.Point(0, 33);
             this.pbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbox.Name = "pbox";
-            this.pbox.Size = new System.Drawing.Size(1002, 564);
+            this.pbox.Size = new System.Drawing.Size(1002, 563);
             this.pbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbox.TabIndex = 1;
             this.pbox.TabStop = false;
@@ -202,19 +202,19 @@
             this.cmsGoster,
             this.cmsKapat});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(139, 60);
+            this.contextMenuStrip.Size = new System.Drawing.Size(143, 60);
             // 
             // cmsGoster
             // 
             this.cmsGoster.Name = "cmsGoster";
-            this.cmsGoster.Size = new System.Drawing.Size(138, 28);
+            this.cmsGoster.Size = new System.Drawing.Size(142, 28);
             this.cmsGoster.Text = "Göster";
             this.cmsGoster.Click += new System.EventHandler(this.cmsGoster_Click);
             // 
             // cmsKapat
             // 
             this.cmsKapat.Name = "cmsKapat";
-            this.cmsKapat.Size = new System.Drawing.Size(138, 28);
+            this.cmsKapat.Size = new System.Drawing.Size(142, 28);
             this.cmsKapat.Text = "Kapat";
             this.cmsKapat.Click += new System.EventHandler(this.cmsKapat_Click);
             // 
@@ -239,7 +239,7 @@
             this.MinimumSize = new System.Drawing.Size(1020, 645);
             this.Name = "FrmBing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bing Duvar Kağıdı Değiştirici 2.12";
+            this.Text = "Bing Duvar Kağıdı Değiştirici 2.2";
             this.Load += new System.EventHandler(this.FrmBing_Load);
             this.Resize += new System.EventHandler(this.FrmBing_Resize);
             this.menuStrip.ResumeLayout(false);

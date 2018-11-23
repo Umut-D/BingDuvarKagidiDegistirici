@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using bing_duvar_kagidi_degistirici.Formlar;
+using BingDuvarKagidi.Formlar;
 
-namespace bing_duvar_kagidi_degistirici
+namespace BingDuvarKagidi
 {
     internal static class Program
     {

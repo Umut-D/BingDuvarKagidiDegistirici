@@ -1,4 +1,4 @@
-﻿namespace bing_duvar_kagidi_degistirici.Formlar
+﻿namespace BingDuvarKagidi.Formlar
 {
     partial class FrmUlkeSec
     {
@@ -67,7 +67,7 @@
             // lblAlmanya
             // 
             this.lblAlmanya.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblAlmanya.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Almanya_icon;
+            this.lblAlmanya.Image = global::BingDuvarKagidi.Properties.Resources.Almanya_icon;
             this.lblAlmanya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAlmanya.Location = new System.Drawing.Point(62, 135);
             this.lblAlmanya.Name = "lblAlmanya";
@@ -79,7 +79,7 @@
             // lblAvustralya
             // 
             this.lblAvustralya.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblAvustralya.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Avusturalya_icon;
+            this.lblAvustralya.Image = global::BingDuvarKagidi.Properties.Resources.Avusturalya_icon;
             this.lblAvustralya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAvustralya.Location = new System.Drawing.Point(468, 135);
             this.lblAvustralya.Name = "lblAvustralya";
@@ -91,7 +91,7 @@
             // lblBrezilya
             // 
             this.lblBrezilya.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblBrezilya.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Brezilya_icon;
+            this.lblBrezilya.Image = global::BingDuvarKagidi.Properties.Resources.Brezilya_icon;
             this.lblBrezilya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBrezilya.Location = new System.Drawing.Point(683, 135);
             this.lblBrezilya.Name = "lblBrezilya";
@@ -103,7 +103,7 @@
             // lblBritanya
             // 
             this.lblBritanya.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblBritanya.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Britanya_icon;
+            this.lblBritanya.Image = global::BingDuvarKagidi.Properties.Resources.Britanya_icon;
             this.lblBritanya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBritanya.Location = new System.Drawing.Point(63, 288);
             this.lblBritanya.Name = "lblBritanya";
@@ -115,7 +115,7 @@
             // lblFransa
             // 
             this.lblFransa.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblFransa.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Fransa_icon;
+            this.lblFransa.Image = global::BingDuvarKagidi.Properties.Resources.Fransa_icon;
             this.lblFransa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblFransa.Location = new System.Drawing.Point(276, 288);
             this.lblFransa.Name = "lblFransa";
@@ -127,7 +127,7 @@
             // lblHindistan
             // 
             this.lblHindistan.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblHindistan.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Hindistan_icon;
+            this.lblHindistan.Image = global::BingDuvarKagidi.Properties.Resources.Hindistan_icon;
             this.lblHindistan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblHindistan.Location = new System.Drawing.Point(473, 288);
             this.lblHindistan.Name = "lblHindistan";
@@ -139,7 +139,7 @@
             // lblJaponya
             // 
             this.lblJaponya.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblJaponya.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Japonya_icon;
+            this.lblJaponya.Image = global::BingDuvarKagidi.Properties.Resources.Japonya_icon;
             this.lblJaponya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblJaponya.Location = new System.Drawing.Point(682, 288);
             this.lblJaponya.Name = "lblJaponya";
@@ -151,7 +151,7 @@
             // lblKanada
             // 
             this.lblKanada.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblKanada.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Kanada_icon;
+            this.lblKanada.Image = global::BingDuvarKagidi.Properties.Resources.Kanada_icon;
             this.lblKanada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblKanada.Location = new System.Drawing.Point(67, 443);
             this.lblKanada.Name = "lblKanada";
@@ -163,7 +163,7 @@
             // lblTurkiye
             // 
             this.lblTurkiye.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblTurkiye.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Türkiye_icon;
+            this.lblTurkiye.Image = global::BingDuvarKagidi.Properties.Resources.Türkiye_icon;
             this.lblTurkiye.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTurkiye.Location = new System.Drawing.Point(274, 443);
             this.lblTurkiye.Name = "lblTurkiye";
@@ -175,7 +175,7 @@
             // lblYeniZelanda
             // 
             this.lblYeniZelanda.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblYeniZelanda.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Yeni_Zelanda_icon;
+            this.lblYeniZelanda.Image = global::BingDuvarKagidi.Properties.Resources.Yeni_Zelanda_icon;
             this.lblYeniZelanda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblYeniZelanda.Location = new System.Drawing.Point(461, 443);
             this.lblYeniZelanda.Name = "lblYeniZelanda";
@@ -187,7 +187,7 @@
             // lblAmerika
             // 
             this.lblAmerika.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.lblAmerika.Image = global::bing_duvar_kagidi_degistirici.Properties.Resources.Amerika_icon;
+            this.lblAmerika.Image = global::BingDuvarKagidi.Properties.Resources.Amerika_icon;
             this.lblAmerika.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAmerika.Location = new System.Drawing.Point(269, 135);
             this.lblAmerika.Name = "lblAmerika";

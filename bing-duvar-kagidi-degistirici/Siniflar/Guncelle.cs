@@ -4,12 +4,12 @@ using System.Net;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace bing_duvar_kagidi_degistirici.Siniflar
+namespace BingDuvarKagidi.Siniflar
 {
     // Programa dair güncelleme olup olmadığına Umutd.com'dan bak 
     public class Guncelle
     {
-        public string GuncellemeLinki = @"http://www.umutd.com/wp-content/program-versions/bing-duvar-kagidi-degistirici.xml";
+        private string GuncellemeLinki = @"http://www.umutd.com/wp-content/program-versions/bing-duvar-kagidi-degistirici.xml";
 
         // Programın güncelleme kontrolünü yap
         public void GuncellemeKontroluYap()
@@ -32,8 +32,8 @@ namespace bing_duvar_kagidi_degistirici.Siniflar
                         {
                             string versiyonNo = xmlOku.GetAttribute("version");
 
-                            //Versiyon güncellemelerinde bu alana dikkat!
-                            if (versiyonNo == "2.12")
+                            // Versiyon güncellemelerinde bu alana dikkat!
+                            if (versiyonNo == "2.2")
                             {
                                 MessageBox.Show(@"Program günceldir. Yeni versiyon çıkana kadar şimdilik en iyisi bu.", @"Güncelle", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }

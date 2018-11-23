@@ -7,8 +7,8 @@
     <ProjectGuid>{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>bing_duvar_kagidi_degistirici</RootNamespace>
-    <AssemblyName>bing-duvar-kagidi-degistirici</AssemblyName>
+    <RootNamespace>BingDuvarKagidi</RootNamespace>
+    <AssemblyName>BingDuvarKagidi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -26,7 +26,7 @@
     <ProductName>Bing Duvar Kağıdı Değiştiricisi 2.1</ProductName>
     <PublisherName>Umut D.</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.1.0.0</ApplicationVersion>
+    <ApplicationVersion>2.1.3.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -98,19 +98,22 @@
     <Compile Include="Formlar\Hakkinda.Designer.cs">
       <DependentUpon>Hakkinda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Siniflar\BingWebSiteleri.cs" />
+    <Compile Include="Siniflar\Cozunurluk.cs" />
     <Compile Include="Siniflar\Guncelle.cs" />
     <Compile Include="Siniflar\Baglanti.cs" />
     <Compile Include="Siniflar\DuvarKagidi.cs" />
-    <Compile Include="Formlar\Form1.cs">
+    <Compile Include="Formlar\FrmBing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formlar\FrmBing.Designer.cs">
+      <DependentUpon>FrmBing.cs</DependentUpon>
     </Compile>
     <Compile Include="Siniflar\HataMesajlari.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Siniflar\SeciliUlkeGorseli.cs" />
+    <Compile Include="Siniflar\ThumbnailIndir.cs" />
     <Compile Include="Siniflar\XmlOkuYaz.cs" />
     <Compile Include="Formlar\UlkeSec.cs">
       <SubType>Form</SubType>
@@ -121,8 +124,8 @@
     <EmbeddedResource Include="Formlar\Ayarlar.resx">
       <DependentUpon>Ayarlar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formlar\FrmBing.resx">
+      <DependentUpon>FrmBing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Hakkinda.resx">
       <DependentUpon>Hakkinda.cs</DependentUpon>

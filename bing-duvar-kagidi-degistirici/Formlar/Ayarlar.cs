@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Xml;
-using bing_duvar_kagidi_degistirici.Siniflar;
+using BingDuvarKagidi.Siniflar;
 using Microsoft.Win32;
 
-namespace bing_duvar_kagidi_degistirici.Formlar
+namespace BingDuvarKagidi.Formlar
 {
     public partial class FrmAyarlar : Form
     {

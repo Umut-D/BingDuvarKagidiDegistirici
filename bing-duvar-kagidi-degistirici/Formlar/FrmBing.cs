@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using bing_duvar_kagidi_degistirici.Siniflar;
+using BingDuvarKagidi.Siniflar;
 
-namespace bing_duvar_kagidi_degistirici.Formlar
+namespace BingDuvarKagidi.Formlar
 {
     public partial class FrmBing : Form
     {
@@ -36,7 +36,7 @@ namespace bing_duvar_kagidi_degistirici.Formlar
             EkranCozunurlugu = _cozunurluk.CozunurlukBul();
 
             // İnternet bağlantısı olup olmadığını kontrol et
-            _baglanti.BaglantiyiKontrolEt(tssDurum);
+            _baglanti.BaglantiKontrol(tssDurum);
            
             // Değiştir butonu program yüklenince aktif olmasın. Kullanıcı önce görseli indirmeli
             tsmDegistir.Enabled = false;

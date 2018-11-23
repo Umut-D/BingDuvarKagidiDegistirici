@@ -3,14 +3,15 @@ using System.IO;
 using System.Text;
 using System.Xml;
 
-namespace bing_duvar_kagidi_degistirici.Siniflar
+namespace BingDuvarKagidi.Siniflar
 {
     internal class XmlOkuYaz
     {
         // Değişken alanı
-        public bool AyarlarBaslangic, AyarlarOtomatikDegistir;
-        public DateTime AyarlarSaat;
-        public string AyarlarSeciliUlke;
+        public bool AyarlarBaslangic { get; set; }
+        public bool AyarlarOtomatikDegistir { get; set; }
+        public DateTime AyarlarSaat { get; set; }
+        public string AyarlarSeciliUlke { get; set; }
         private readonly string _dizin = AppDomain.CurrentDomain.BaseDirectory + @"\ayarlar.xml";
 
         // Sınıf alanı

@@ -1,4 +1,4 @@
-﻿namespace bing_duvar_kagidi_degistirici.Formlar
+﻿namespace BingDuvarKagidi.Formlar
 {
     partial class FrmAyarlar
     {

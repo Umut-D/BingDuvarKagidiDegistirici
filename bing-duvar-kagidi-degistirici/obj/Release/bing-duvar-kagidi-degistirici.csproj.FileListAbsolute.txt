@@ -10,3 +10,14 @@ D:\Belgelerim\Programlar\C#\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degi
 D:\Belgelerim\Programlar\C#\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi-degistirici.csproj.GenerateResource.Cache
 D:\Belgelerim\Programlar\C#\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi-degistirici.exe
 D:\Belgelerim\Programlar\C#\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi-degistirici.pdb
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\bin\Release\bing-duvar-kagidi.exe
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\bin\Release\bing-duvar-kagidi.pdb
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi-degistirici.csprojResolveAssemblyReference.cache
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing_duvar_kagidi_degistirici.Formlar.FrmAyarlar.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing_duvar_kagidi_degistirici.Formlar.FrmBing.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing_duvar_kagidi.Formlar.FrmHakkinda.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing_duvar_kagidi.Properties.Resources.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing_duvar_kagidi.Formlar.FrmUlkeSec.resources
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi-degistirici.csproj.GenerateResource.Cache
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi.exe
+C:\Users\Zeta\Desktop\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\bing-duvar-kagidi.pdb
