@@ -31,29 +31,35 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBing));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.tsmiDosya = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAyarlar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmKapat = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDuvarKagidi = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmIndir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDegistir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBilgi = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmBing = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmGuncelle = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHakkinda = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSeciliUlke = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAlmanya = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAmerika = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAvustralya = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBrezilya = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBritanya = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiFransa = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiHindistan = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiJaponya = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiKanada = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTurkiye = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tssDurum = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pbox = new System.Windows.Forms.PictureBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsGoster = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsKapat = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pbox = new System.Windows.Forms.PictureBox();
+            this.btnIleri = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -61,7 +67,6 @@
             this.menuStrip.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(22, 22);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiDosya,
             this.tsmiDuvarKagidi,
             this.tsmiBilgi,
             this.tsmiSeciliUlke});
@@ -72,51 +77,13 @@
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
-            // tsmiDosya
-            // 
-            this.tsmiDosya.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAyarlar,
-            this.tsmKapat});
-            this.tsmiDosya.Name = "tsmiDosya";
-            this.tsmiDosya.Size = new System.Drawing.Size(70, 27);
-            this.tsmiDosya.Text = "Dosya";
-            // 
-            // tsmAyarlar
-            // 
-            this.tsmAyarlar.Name = "tsmAyarlar";
-            this.tsmAyarlar.Size = new System.Drawing.Size(146, 28);
-            this.tsmAyarlar.Text = "Ayarlar";
-            this.tsmAyarlar.Click += new System.EventHandler(this.tsmAyarlar_Click);
-            // 
-            // tsmKapat
-            // 
-            this.tsmKapat.Name = "tsmKapat";
-            this.tsmKapat.Size = new System.Drawing.Size(146, 28);
-            this.tsmKapat.Text = "Kapat";
-            this.tsmKapat.Click += new System.EventHandler(this.tsmKapat_Click);
-            // 
             // tsmiDuvarKagidi
             // 
-            this.tsmiDuvarKagidi.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmIndir,
-            this.tsmDegistir});
+            this.tsmiDuvarKagidi.Enabled = false;
             this.tsmiDuvarKagidi.Name = "tsmiDuvarKagidi";
-            this.tsmiDuvarKagidi.Size = new System.Drawing.Size(119, 27);
-            this.tsmiDuvarKagidi.Text = "Duvar Kağıdı";
-            // 
-            // tsmIndir
-            // 
-            this.tsmIndir.Name = "tsmIndir";
-            this.tsmIndir.Size = new System.Drawing.Size(149, 28);
-            this.tsmIndir.Text = "İndir";
-            this.tsmIndir.Click += new System.EventHandler(this.tsmIndir_Click);
-            // 
-            // tsmDegistir
-            // 
-            this.tsmDegistir.Name = "tsmDegistir";
-            this.tsmDegistir.Size = new System.Drawing.Size(149, 28);
-            this.tsmDegistir.Text = "Değiştir";
-            this.tsmDegistir.Click += new System.EventHandler(this.tsmDegistir_Click);
+            this.tsmiDuvarKagidi.Size = new System.Drawing.Size(154, 27);
+            this.tsmiDuvarKagidi.Text = "Duvar Kağıdı Yap";
+            this.tsmiDuvarKagidi.Click += new System.EventHandler(this.TsmiDuvarKagidi_Click);
             // 
             // tsmiBilgi
             // 
@@ -125,37 +92,118 @@
             this.tsmGuncelle,
             this.tsmHakkinda});
             this.tsmiBilgi.Name = "tsmiBilgi";
-            this.tsmiBilgi.Size = new System.Drawing.Size(53, 27);
+            this.tsmiBilgi.Size = new System.Drawing.Size(57, 27);
             this.tsmiBilgi.Text = "Bilgi";
             // 
             // tsmBing
             // 
             this.tsmBing.Name = "tsmBing";
-            this.tsmBing.Size = new System.Drawing.Size(200, 28);
+            this.tsmBing.Size = new System.Drawing.Size(214, 30);
             this.tsmBing.Text = "Bing.com\'a Git";
-            this.tsmBing.Click += new System.EventHandler(this.tsmBing_Click);
+            this.tsmBing.Click += new System.EventHandler(this.TsmBing_Click);
             // 
             // tsmGuncelle
             // 
             this.tsmGuncelle.Name = "tsmGuncelle";
-            this.tsmGuncelle.Size = new System.Drawing.Size(200, 28);
+            this.tsmGuncelle.Size = new System.Drawing.Size(214, 30);
             this.tsmGuncelle.Text = "Güncelle";
-            this.tsmGuncelle.Click += new System.EventHandler(this.tsmGuncelle_Click);
+            this.tsmGuncelle.Click += new System.EventHandler(this.TsmGuncelle_Click);
             // 
             // tsmHakkinda
             // 
             this.tsmHakkinda.Name = "tsmHakkinda";
-            this.tsmHakkinda.Size = new System.Drawing.Size(200, 28);
+            this.tsmHakkinda.Size = new System.Drawing.Size(214, 30);
             this.tsmHakkinda.Text = "Hakkında";
-            this.tsmHakkinda.Click += new System.EventHandler(this.tsmHakkinda_Click);
+            this.tsmHakkinda.Click += new System.EventHandler(this.TsmHakkinda_Click);
             // 
             // tsmiSeciliUlke
             // 
             this.tsmiSeciliUlke.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsmiSeciliUlke.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAlmanya,
+            this.tsmiAmerika,
+            this.tsmiAvustralya,
+            this.tsmiBrezilya,
+            this.tsmiBritanya,
+            this.tsmiFransa,
+            this.tsmiHindistan,
+            this.tsmiJaponya,
+            this.tsmiKanada,
+            this.tsmiTurkiye});
             this.tsmiSeciliUlke.Font = new System.Drawing.Font("Calibri", 9.969231F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tsmiSeciliUlke.Name = "tsmiSeciliUlke";
-            this.tsmiSeciliUlke.Size = new System.Drawing.Size(12, 27);
-            this.tsmiSeciliUlke.Click += new System.EventHandler(this.tsmiSeciliUlke_Click);
+            this.tsmiSeciliUlke.Size = new System.Drawing.Size(16, 27);
+            this.tsmiSeciliUlke.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.TsmiSeciliUlke_DropDownItemClicked);
+            // 
+            // tsmiAlmanya
+            // 
+            this.tsmiAlmanya.Image = global::BingDuvarKagidi.Properties.Resources.Almanya_icon;
+            this.tsmiAlmanya.Name = "tsmiAlmanya";
+            this.tsmiAlmanya.Size = new System.Drawing.Size(189, 30);
+            this.tsmiAlmanya.Text = "Almanya";
+            // 
+            // tsmiAmerika
+            // 
+            this.tsmiAmerika.Image = global::BingDuvarKagidi.Properties.Resources.Amerika_icon;
+            this.tsmiAmerika.Name = "tsmiAmerika";
+            this.tsmiAmerika.Size = new System.Drawing.Size(189, 30);
+            this.tsmiAmerika.Text = "Amerika";
+            // 
+            // tsmiAvustralya
+            // 
+            this.tsmiAvustralya.Image = global::BingDuvarKagidi.Properties.Resources.Avustralya_icon;
+            this.tsmiAvustralya.Name = "tsmiAvustralya";
+            this.tsmiAvustralya.Size = new System.Drawing.Size(189, 30);
+            this.tsmiAvustralya.Text = "Avustralya";
+            // 
+            // tsmiBrezilya
+            // 
+            this.tsmiBrezilya.Image = global::BingDuvarKagidi.Properties.Resources.Brezilya_icon;
+            this.tsmiBrezilya.Name = "tsmiBrezilya";
+            this.tsmiBrezilya.Size = new System.Drawing.Size(189, 30);
+            this.tsmiBrezilya.Text = "Brezilya";
+            // 
+            // tsmiBritanya
+            // 
+            this.tsmiBritanya.Image = global::BingDuvarKagidi.Properties.Resources.Britanya_icon;
+            this.tsmiBritanya.Name = "tsmiBritanya";
+            this.tsmiBritanya.Size = new System.Drawing.Size(189, 30);
+            this.tsmiBritanya.Text = "Britanya";
+            // 
+            // tsmiFransa
+            // 
+            this.tsmiFransa.Image = global::BingDuvarKagidi.Properties.Resources.Fransa_icon;
+            this.tsmiFransa.Name = "tsmiFransa";
+            this.tsmiFransa.Size = new System.Drawing.Size(189, 30);
+            this.tsmiFransa.Text = "Fransa";
+            // 
+            // tsmiHindistan
+            // 
+            this.tsmiHindistan.Image = global::BingDuvarKagidi.Properties.Resources.Hindistan_icon;
+            this.tsmiHindistan.Name = "tsmiHindistan";
+            this.tsmiHindistan.Size = new System.Drawing.Size(189, 30);
+            this.tsmiHindistan.Text = "Hindistan";
+            // 
+            // tsmiJaponya
+            // 
+            this.tsmiJaponya.Image = global::BingDuvarKagidi.Properties.Resources.Japonya_icon;
+            this.tsmiJaponya.Name = "tsmiJaponya";
+            this.tsmiJaponya.Size = new System.Drawing.Size(189, 30);
+            this.tsmiJaponya.Text = "Japonya";
+            // 
+            // tsmiKanada
+            // 
+            this.tsmiKanada.Image = global::BingDuvarKagidi.Properties.Resources.Kanada_icon;
+            this.tsmiKanada.Name = "tsmiKanada";
+            this.tsmiKanada.Size = new System.Drawing.Size(189, 30);
+            this.tsmiKanada.Text = "Kanada";
+            // 
+            // tsmiTurkiye
+            // 
+            this.tsmiTurkiye.Image = global::BingDuvarKagidi.Properties.Resources.Turkiye_icon;
+            this.tsmiTurkiye.Name = "tsmiTurkiye";
+            this.tsmiTurkiye.Size = new System.Drawing.Size(189, 30);
+            this.tsmiTurkiye.Text = "Turkiye";
             // 
             // statusStrip
             // 
@@ -172,7 +220,40 @@
             // tssDurum
             // 
             this.tssDurum.Name = "tssDurum";
-            this.tssDurum.Size = new System.Drawing.Size(0, 17);
+            this.tssDurum.Size = new System.Drawing.Size(0, 15);
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.BalloonTipTitle = "Bing Duvar Kağıdı Değiştirici";
+            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "Bilgilendirme";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseClick);
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(22, 22);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsGoster,
+            this.cmsKapat});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(133, 60);
+            // 
+            // cmsGoster
+            // 
+            this.cmsGoster.Name = "cmsGoster";
+            this.cmsGoster.Size = new System.Drawing.Size(132, 28);
+            this.cmsGoster.Text = "Göster";
+            this.cmsGoster.Click += new System.EventHandler(this.CmsGoster_Click);
+            // 
+            // cmsKapat
+            // 
+            this.cmsKapat.Name = "cmsKapat";
+            this.cmsKapat.Size = new System.Drawing.Size(132, 28);
+            this.cmsKapat.Text = "Kapat";
+            this.cmsKapat.Click += new System.EventHandler(this.CmsKapat_Click);
             // 
             // pbox
             // 
@@ -185,50 +266,37 @@
             this.pbox.TabIndex = 1;
             this.pbox.TabStop = false;
             // 
-            // notifyIcon
+            // btnIleri
             // 
-            this.notifyIcon.BalloonTipTitle = "Bing Duvar Kağıdı Değiştirici";
-            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
-            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "Bilgilendirme";
-            this.notifyIcon.Visible = true;
-            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
+            this.btnIleri.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnIleri.Font = new System.Drawing.Font("Calibri", 8.059701F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIleri.Location = new System.Drawing.Point(945, 290);
+            this.btnIleri.Name = "btnIleri";
+            this.btnIleri.Size = new System.Drawing.Size(45, 26);
+            this.btnIleri.TabIndex = 3;
+            this.btnIleri.Text = ">>";
+            this.btnIleri.UseVisualStyleBackColor = true;
+            this.btnIleri.Click += new System.EventHandler(this.BtnIleri_Click);
             // 
-            // contextMenuStrip
+            // btnGeri
             // 
-            this.contextMenuStrip.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(22, 22);
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsGoster,
-            this.cmsKapat});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(143, 60);
-            // 
-            // cmsGoster
-            // 
-            this.cmsGoster.Name = "cmsGoster";
-            this.cmsGoster.Size = new System.Drawing.Size(142, 28);
-            this.cmsGoster.Text = "Göster";
-            this.cmsGoster.Click += new System.EventHandler(this.cmsGoster_Click);
-            // 
-            // cmsKapat
-            // 
-            this.cmsKapat.Name = "cmsKapat";
-            this.cmsKapat.Size = new System.Drawing.Size(142, 28);
-            this.cmsKapat.Text = "Kapat";
-            this.cmsKapat.Click += new System.EventHandler(this.cmsKapat_Click);
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.btnGeri.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnGeri.Font = new System.Drawing.Font("Calibri", 8.059701F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.Location = new System.Drawing.Point(12, 281);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(45, 26);
+            this.btnGeri.TabIndex = 3;
+            this.btnGeri.Text = "<<";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
             // FrmBing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 596);
+            this.Controls.Add(this.btnGeri);
+            this.Controls.Add(this.btnIleri);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.pbox);
             this.Controls.Add(this.menuStrip);
@@ -239,15 +307,16 @@
             this.MinimumSize = new System.Drawing.Size(1020, 645);
             this.Name = "FrmBing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bing Duvar Kağıdı Değiştirici 2.2";
+            this.Text = "Bing Duvar Kağıdı Değiştirici";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBing_FormClosing);
             this.Load += new System.EventHandler(this.FrmBing_Load);
             this.Resize += new System.EventHandler(this.FrmBing_Resize);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,25 +325,31 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDosya;
-        private System.Windows.Forms.ToolStripMenuItem tsmKapat;
         private System.Windows.Forms.ToolStripMenuItem tsmiDuvarKagidi;
-        private System.Windows.Forms.ToolStripMenuItem tsmIndir;
-        private System.Windows.Forms.ToolStripMenuItem tsmDegistir;
         private System.Windows.Forms.ToolStripMenuItem tsmiBilgi;
         private System.Windows.Forms.ToolStripMenuItem tsmBing;
         private System.Windows.Forms.ToolStripMenuItem tsmGuncelle;
         private System.Windows.Forms.ToolStripMenuItem tsmHakkinda;
-        private System.Windows.Forms.ToolStripMenuItem tsmAyarlar;
-        private System.Windows.Forms.PictureBox pbox;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel tssDurum;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem cmsGoster;
         private System.Windows.Forms.ToolStripMenuItem cmsKapat;
-        private System.Windows.Forms.Timer timer;
         public System.Windows.Forms.ToolStripMenuItem tsmiSeciliUlke;
+        public System.Windows.Forms.PictureBox pbox;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAlmanya;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAmerika;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAvustralya;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBrezilya;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBritanya;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFransa;
+        private System.Windows.Forms.ToolStripMenuItem tsmiHindistan;
+        private System.Windows.Forms.ToolStripMenuItem tsmiJaponya;
+        private System.Windows.Forms.ToolStripMenuItem tsmiKanada;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTurkiye;
+        private System.Windows.Forms.Button btnIleri;
+        private System.Windows.Forms.Button btnGeri;
     }
 }
 

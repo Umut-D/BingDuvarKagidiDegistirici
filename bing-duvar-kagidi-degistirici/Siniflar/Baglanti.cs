@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Drawing;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
 namespace BingDuvarKagidi.Siniflar
 {
-    internal class Baglanti
+    public class Baglanti
     {
         // İnternet bağlatısını kontrol etmek için wininet.dll'yi kullanıp işletim sistemi kaynaklarına eriş
-        [DllImport("wininet.dll", CharSet = CharSet.Auto)]
+        [DllImport("wininet.dll")]
         private static extern bool InternetGetConnectedState(ref InternetConnectionStateFlags lpdwFlags, int dwReserved);
 
         [Flags]
@@ -22,21 +20,12 @@ namespace BingDuvarKagidi.Siniflar
             INTERNET_CONNECTION_CONFIGURED = 0x40
         }
 
-        public void BaglantiKontrol(ToolStripStatusLabel tssDurum)
+        public static bool Kontrol()
         {
             InternetConnectionStateFlags flags = 0;
             bool baglantiDurumu = InternetGetConnectedState(ref flags, 0);
 
-            if (baglantiDurumu)
-            {
-                tssDurum.Text = @"İnternet bağlantınız var. Duvar kağıdını indirebilirsiniz.";
-                tssDurum.ForeColor = Color.Green;
-            }
-            else
-            {
-                tssDurum.Text = @"İnternet bağlantınız maalesef yok. Günün duvar kağıdını indiremezsiniz.";
-                tssDurum.ForeColor = Color.MediumVioletRed;
-            }
+            return baglantiDurumu;
         }
     }
 }

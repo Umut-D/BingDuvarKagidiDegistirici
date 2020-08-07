@@ -86,19 +86,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formlar\Ayarlar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\Ayarlar.Designer.cs">
-      <DependentUpon>Ayarlar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formlar\Hakkinda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\Hakkinda.Designer.cs">
       <DependentUpon>Hakkinda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siniflar\BingWebSiteleri.cs" />
+    <Compile Include="Siniflar\WebSiteleri.cs" />
     <Compile Include="Siniflar\Cozunurluk.cs" />
     <Compile Include="Siniflar\Guncelle.cs" />
     <Compile Include="Siniflar\Baglanti.cs" />
@@ -109,21 +103,10 @@
     <Compile Include="Formlar\FrmBing.Designer.cs">
       <DependentUpon>FrmBing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siniflar\HataMesajlari.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Siniflar\SeciliUlkeGorseli.cs" />
-    <Compile Include="Siniflar\ThumbnailIndir.cs" />
-    <Compile Include="Siniflar\XmlOkuYaz.cs" />
-    <Compile Include="Formlar\UlkeSec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\UlkeSec.Designer.cs">
-      <DependentUpon>UlkeSec.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Formlar\Ayarlar.resx">
-      <DependentUpon>Ayarlar.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Siniflar\Indir.cs" />
+    <Compile Include="Siniflar\Gorseller.cs" />
     <EmbeddedResource Include="Formlar\FrmBing.resx">
       <DependentUpon>FrmBing.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,10 +123,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Formlar\UlkeSec.resx">
-      <DependentUpon>UlkeSec.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="app.manifest" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

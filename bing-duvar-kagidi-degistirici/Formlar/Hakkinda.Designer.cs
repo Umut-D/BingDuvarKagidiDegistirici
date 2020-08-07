@@ -29,54 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHakkinda));
-            this.lblHakkindaAd = new System.Windows.Forms.Label();
-            this.lblHakkindaVersiyon = new System.Windows.Forms.Label();
-            this.lblHakkindaBilgi = new System.Windows.Forms.Label();
-            this.llblHakkinda = new System.Windows.Forms.LinkLabel();
+            this.lblProgramAdi = new System.Windows.Forms.Label();
+            this.lblBilgi = new System.Windows.Forms.Label();
+            this.lblAltBilgi = new System.Windows.Forms.LinkLabel();
             this.pboxHakkinda = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxHakkinda)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblHakkindaAd
+            // lblProgramAdi
             // 
-            this.lblHakkindaAd.AutoSize = true;
-            this.lblHakkindaAd.Font = new System.Drawing.Font("Calibri", 9.969231F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHakkindaAd.Location = new System.Drawing.Point(106, 12);
-            this.lblHakkindaAd.Name = "lblHakkindaAd";
-            this.lblHakkindaAd.Size = new System.Drawing.Size(232, 23);
-            this.lblHakkindaAd.TabIndex = 0;
-            this.lblHakkindaAd.Text = "Bing Duvar Kağıdı Değiştirici";
+            this.lblProgramAdi.AutoSize = true;
+            this.lblProgramAdi.Font = new System.Drawing.Font("Calibri", 9.969231F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblProgramAdi.Location = new System.Drawing.Point(106, 12);
+            this.lblProgramAdi.Name = "lblProgramAdi";
+            this.lblProgramAdi.Size = new System.Drawing.Size(273, 23);
+            this.lblProgramAdi.TabIndex = 0;
+            this.lblProgramAdi.Text = "Bing Duvar Kağıdı Değiştirici (2.3)\r\n";
             // 
-            // lblHakkindaVersiyon
+            // lblBilgi
             // 
-            this.lblHakkindaVersiyon.AutoSize = true;
-            this.lblHakkindaVersiyon.Location = new System.Drawing.Point(347, 12);
-            this.lblHakkindaVersiyon.Name = "lblHakkindaVersiyon";
-            this.lblHakkindaVersiyon.Size = new System.Drawing.Size(67, 23);
-            this.lblHakkindaVersiyon.TabIndex = 1;
-            this.lblHakkindaVersiyon.Text = "ver. 2.2";
+            this.lblBilgi.Location = new System.Drawing.Point(106, 46);
+            this.lblBilgi.Name = "lblBilgi";
+            this.lblBilgi.Size = new System.Drawing.Size(461, 121);
+            this.lblBilgi.TabIndex = 4;
+            this.lblBilgi.Text = resources.GetString("lblBilgi.Text");
             // 
-            // lblHakkindaBilgi
+            // lblAltBilgi
             // 
-            this.lblHakkindaBilgi.Location = new System.Drawing.Point(106, 46);
-            this.lblHakkindaBilgi.Name = "lblHakkindaBilgi";
-            this.lblHakkindaBilgi.Size = new System.Drawing.Size(459, 121);
-            this.lblHakkindaBilgi.TabIndex = 4;
-            this.lblHakkindaBilgi.Text = resources.GetString("lblHakkindaBilgi.Text");
-            // 
-            // llblHakkinda
-            // 
-            this.llblHakkinda.AutoSize = true;
-            this.llblHakkinda.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.llblHakkinda.LinkArea = new System.Windows.Forms.LinkArea(0, 7);
-            this.llblHakkinda.Location = new System.Drawing.Point(106, 167);
-            this.llblHakkinda.Name = "llblHakkinda";
-            this.llblHakkinda.Size = new System.Drawing.Size(478, 28);
-            this.llblHakkinda.TabIndex = 5;
-            this.llblHakkinda.TabStop = true;
-            this.llblHakkinda.Text = "Umut D. | Açık kaynak lisanslı (GPL) olarak kodlanmıştır | 2018";
-            this.llblHakkinda.UseCompatibleTextRendering = true;
-            this.llblHakkinda.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblHakkinda_LinkClicked);
+            this.lblAltBilgi.AutoSize = true;
+            this.lblAltBilgi.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.lblAltBilgi.LinkArea = new System.Windows.Forms.LinkArea(0, 7);
+            this.lblAltBilgi.Location = new System.Drawing.Point(106, 167);
+            this.lblAltBilgi.Name = "lblAltBilgi";
+            this.lblAltBilgi.Size = new System.Drawing.Size(461, 28);
+            this.lblAltBilgi.TabIndex = 5;
+            this.lblAltBilgi.TabStop = true;
+            this.lblAltBilgi.Text = "Umut D. | Açık kaynak lisanslı (MIT) olarak yazılmıştır | 2020";
+            this.lblAltBilgi.UseCompatibleTextRendering = true;
+            this.lblAltBilgi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblHakkinda_LinkClicked);
             // 
             // pboxHakkinda
             // 
@@ -93,11 +83,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 206);
-            this.Controls.Add(this.llblHakkinda);
-            this.Controls.Add(this.lblHakkindaBilgi);
+            this.Controls.Add(this.lblAltBilgi);
+            this.Controls.Add(this.lblBilgi);
             this.Controls.Add(this.pboxHakkinda);
-            this.Controls.Add(this.lblHakkindaVersiyon);
-            this.Controls.Add(this.lblHakkindaAd);
+            this.Controls.Add(this.lblProgramAdi);
             this.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -107,6 +96,7 @@
             this.Name = "FrmHakkinda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hakkında";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmHakkinda_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pboxHakkinda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,10 +105,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblHakkindaAd;
-        private System.Windows.Forms.Label lblHakkindaVersiyon;
+        private System.Windows.Forms.Label lblProgramAdi;
         private System.Windows.Forms.PictureBox pboxHakkinda;
-        private System.Windows.Forms.Label lblHakkindaBilgi;
-        private System.Windows.Forms.LinkLabel llblHakkinda;
+        private System.Windows.Forms.Label lblBilgi;
+        private System.Windows.Forms.LinkLabel lblAltBilgi;
     }
 }

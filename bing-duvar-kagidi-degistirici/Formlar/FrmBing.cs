@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Windows.Forms;
+using BingDuvarKagidi.Properties;
 using BingDuvarKagidi.Siniflar;
 
 namespace BingDuvarKagidi.Formlar
@@ -12,55 +12,41 @@ namespace BingDuvarKagidi.Formlar
         {
             InitializeComponent();
         }
-        
-        // Sınıflar
-        private readonly Cozunurluk _cozunurluk = new Cozunurluk();
-        private readonly DuvarKagidiIndir _duvarKagidiIndir = new DuvarKagidiIndir();
-        private readonly XmlOkuYaz _xmlOkuYaz = new XmlOkuYaz();
-        private readonly Guncelle _guncelle = new Guncelle();
-        private readonly Baglanti _baglanti = new Baglanti();
-        private readonly FrmHakkinda _frmHakkinda = new FrmHakkinda();
-        private readonly FrmUlkeSec _frmUlkeSec = new FrmUlkeSec();
-        private readonly SeciliUlkeGorseli _seciliUlkeGorseli = new SeciliUlkeGorseli();
 
-        // Değişkenler
-        public string EkranCozunurlugu, DuvarKagidiBilgisi, Saat;
+        private readonly Indir _indir = new Indir();
+        private int _ayar;
 
         private void FrmBing_Load(object sender, EventArgs e)
         {
-            // XML Oku, yoksa XML oluştur
-            _xmlOkuYaz.XmlDurumu();
-            tsmiSeciliUlke.Text = _xmlOkuYaz.AyarlarSeciliUlke;
+            // Ayarlardan hangi ülkenin seçili olduğunu belirle
+            _ayar = (int) Settings.Default["Ulke"];
 
-            // Çözünürlük sınıfından gelen çözünürlük bilgisini al
-            EkranCozunurlugu = _cozunurluk.CozunurlukBul();
-
-            // İnternet bağlantısı olup olmadığını kontrol et
-            _baglanti.BaglantiKontrol(tssDurum);
-           
-            // Değiştir butonu program yüklenince aktif olmasın. Kullanıcı önce görseli indirmeli
-            tsmDegistir.Enabled = false;
-
-            // Seçili olan ülkenin bayrağını sağ üstteki TSMISeciliUlke alanında göster
-            _seciliUlkeGorseli.UlkeGorseliniYukle(tsmiSeciliUlke);
+            Ulke();
+            Indir();
+            BingeGit();
         }
 
-        public void tsmIndir_Click(object sender, EventArgs e)
-        {            
-            // Xml dosyasından seçili ülkeyi al ve ona göre duvar kağıdını yükle
-            _duvarKagidiIndir.SecilenBingWebSitesi(_xmlOkuYaz.AyarlarSeciliUlke);
-            
-            // Duvar kağıdını indir ve yükle
-            _duvarKagidiIndir.DuvarKagidiIndirVeYukle(pbox, EkranCozunurlugu);
+        private void TsmiDuvarKagidi_Click(object sender, EventArgs e)
+        {
+            Degistir();
+        }
 
-            tsmDegistir.Enabled = true;
-            tssDurum.Text = _duvarKagidiIndir.DuzenliBilgi;
-            tssDurum.ForeColor = Color.Black;
+        private void TsmiSeciliUlke_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            tsmiSeciliUlke.Text = e.ClickedItem.Text;
+
+            ToolStripMenuItem tiklananIndeks = (ToolStripMenuItem)sender;
+            _ayar = tiklananIndeks.DropDownItems.IndexOf(e.ClickedItem);
+
+            Gorseller gorseller = new Gorseller();
+            tsmiSeciliUlke.Image = gorseller.Ulke(tsmiSeciliUlke);
+
+            BingeGit();
+            Indir();
         }
 
         private void FrmBing_Resize(object sender, EventArgs e)
         {
-            // Form küçülüp büyütüldüğünde görüntülenecek mesajlar ve form durumu
             switch (WindowState)
             {
                 case FormWindowState.Minimized:
@@ -76,91 +62,117 @@ namespace BingDuvarKagidi.Formlar
             }
         }
 
-        private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
+        private void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
         {
-            // Farenin sol tuşuna basıldığında formu göster
-            if (e.Button == MouseButtons.Left)
-            {
-                Show();
-                WindowState = FormWindowState.Normal;
-            }
-        }
+            if (e.Button != MouseButtons.Left)
+                return;
 
-        private void cmsGoster_Click(object sender, EventArgs e)
-        {
-            // Bağlam menüsü > Göster
             Show();
             WindowState = FormWindowState.Normal;
         }
 
-        private void cmsKapat_Click(object sender, EventArgs e)
+        private void CmsGoster_Click(object sender, EventArgs e)
         {
-            // Bağlam menüsü > Kapat
-            tsmKapat.PerformClick();
+            Show();
+            WindowState = FormWindowState.Normal;
         }
 
-        private void tsmDegistir_Click(object sender, EventArgs e)
+        private void CmsKapat_Click(object sender, EventArgs e)
         {
-            // Duvar kağıdını dizine indir ve değiştir
-            var resimAdresi = new Uri(AppDomain.CurrentDomain.BaseDirectory + "images\\" + _duvarKagidiIndir.Tarih.ToString("MM.dd.yyyy") + @"-Bing" + _duvarKagidiIndir.UlkeAdi + ".bmp");
-            DuvarKagidi.DuvarKagidiOlustur(resimAdresi, DuvarKagidi.Konumlandirma.Uzat);
-
-            // Windows ekranında gerekli bilgilendirmeyi 2 saniye boyunca yap
-            notifyIcon.BalloonTipText = _duvarKagidiIndir.DuzenliBilgi;
-            notifyIcon.ShowBalloonTip(2000);
-        }
-
-        private void tsmAyarlar_Click(object sender, EventArgs e)
-        {
-            // Ayarlar alanına geçiş yap
-            var frmAyarlar = new FrmAyarlar();
-            frmAyarlar.ShowDialog();
-        }
-
-        private void tsmGuncelle_Click(object sender, EventArgs e)
-        {
-            // Programın güncel olup olmadığını denetle
-            _guncelle.GuncellemeKontroluYap();
-        }
-
-        private void tsmBing_Click(object sender, EventArgs e)
-        {
-            // Hangi Bing sitesi programda seçili ise o siteye dallan
-            string seciliSiteAdresi = tsmiSeciliUlke.ToString();
-            Process.Start(_duvarKagidiIndir.SecilenBingWebSitesi(seciliSiteAdresi));
-        }
-
-        private void tsmHakkinda_Click(object sender, EventArgs e)
-        {
-            _frmHakkinda.ShowDialog();
-        }
-
-        private void tsmiSeciliUlke_Click(object sender, EventArgs e)
-        {
-            _frmUlkeSec.ShowDialog();
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            // Mevcut ve XML dosyasından kaydedilen zamanları al
-            Saat = DateTime.Now.ToString("HH:mm:ss");
-            _xmlOkuYaz.XmlDurumu();
-
-            if (_xmlOkuYaz.AyarlarOtomatikDegistir)
-            {
-                // Eğer mevcut saatle, kullanıcının girdiği saat aynı ise duvar kağıdını otomatik olarak değiştir
-                if (Saat == _xmlOkuYaz.AyarlarSaat.ToLongTimeString())
-                {
-                    tsmIndir.PerformClick();
-                    tsmDegistir.PerformClick();
-                }
-            }
-        }
-
-        private void tsmKapat_Click(object sender, EventArgs e)
-        {
-            // Uygulamadan çık
             Application.Exit();
+        }
+
+        private void TsmBing_Click(object sender, EventArgs e)
+        {
+            string seciliUlke = tsmiSeciliUlke.Text;
+            Process.Start(_indir.Adres(seciliUlke));
+        }
+
+        private void TsmGuncelle_Click(object sender, EventArgs e)
+        {
+            Guncelle guncelle = new Guncelle();
+            guncelle.Kontrol();
+        }
+
+        private void TsmHakkinda_Click(object sender, EventArgs e)
+        {
+            FrmHakkinda frmHakkinda = new FrmHakkinda();
+            frmHakkinda.ShowDialog();
+        }
+
+        private void FrmBing_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Seçili ülkenin ayarını kaydederek çıkış yap
+            Settings.Default["Ulke"] = _ayar;
+            Settings.Default.Save();
+        }
+
+        private void BtnIleri_Click(object sender, EventArgs e)
+        {
+            _ayar++;
+            if (_ayar == 10)
+                _ayar = 9;
+
+            Ulke();
+            Indir();
+            BingeGit();
+        }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            _ayar--;
+            if (_ayar == -1)
+                _ayar = 0;
+
+            Ulke();
+            Indir();
+            BingeGit();
+        }
+
+        // ProcessCmdKey'i ezme sayesinde sağ ve sol oka basılarak görseller ileri-geri götürülebiliyor
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Right:
+                    BtnIleri_Click(null, null);
+                    return true;
+                case Keys.Left:
+                    BtnGeri_Click(null, null);
+                    return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void Ulke()
+        {
+            tsmiSeciliUlke.Text = tsmiSeciliUlke.DropDownItems[_ayar].Text;
+            tsmiSeciliUlke.Image = tsmiSeciliUlke.DropDownItems[_ayar].Image;
+        }
+
+        private void Indir()
+        {
+            Cozunurluk cozunurluk = new Cozunurluk();
+            _indir.Yukle(cozunurluk.Bul(), tsmiSeciliUlke.Text);
+
+            tssDurum.Text = _indir.DuzenliBilgi;
+            tsmiDuvarKagidi.Enabled = true;
+        }
+
+        private void Degistir()
+        {
+            DuvarKagidi duvarKagidi = new DuvarKagidi();
+            Uri adres = new Uri(_indir.DosyaAdresi);
+            duvarKagidi.Olustur(adres, DuvarKagidi.EkranKonumu.Uzat);
+
+            notifyIcon.BalloonTipText = _indir.DuzenliBilgi;
+            notifyIcon.ShowBalloonTip(2500);
+        }
+
+        private void BingeGit()
+        {
+            tsmBing.Text = tsmiSeciliUlke.Text + @" Bing.com'a Git";
         }
     }
 }

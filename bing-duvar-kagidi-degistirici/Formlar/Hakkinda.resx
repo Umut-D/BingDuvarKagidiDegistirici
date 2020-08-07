@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblHakkindaBilgi.Text" xml:space="preserve">
-    <value>Bu program ile Bing arama motorunun dünya çapındaki farklı web sitelerinde yer alan ve her gün yenilenen fotoğraflarını görebilir; farklı canlı, konu, yer veya yapılardan oluşan fotoğrafları bilgisayarınıza indirerek mevcut Windows İşletim sisteminizde duvar kağıdınız yapabilirsiniz.
+  <data name="lblBilgi.Text" xml:space="preserve">
+    <value>Bu programla Bing arama motorunun dünya çapındaki web sayfalarında yer alan ve her gün yenilenen fotoğrafları görebilir; farklı canlı, konu, yer veya yapılardan oluşan fotoğrafları bilgisayarınıza indirerek duvar kağıdınız yapabilirsiniz.
 
 </value>
   </data>

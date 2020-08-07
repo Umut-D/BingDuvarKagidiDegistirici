@@ -19,7 +19,7 @@ namespace BingDuvarKagidi.Properties {
     // sınıfı tarafından otomatik olarak oluşturuldu.
     // Üye eklemek veya kaldırmak için .ResX dosyanızı düzenleyin ve sonra da ResGen
     // komutunu /str seçeneğiyle yeniden çalıştırın veya VS projenizi yeniden oluşturun.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -47,7 +47,7 @@ namespace BingDuvarKagidi.Properties {
         }
         
         /// <summary>
-        ///   Bu türü kesin olarak belirtilmiş kaynak sınıfını kullanarak geçerli iş parçacığının
+        ///   Tümü için geçerli iş parçacığının CurrentUICulture özelliğini geçersiz kular
         ///   CurrentUICulture özelliğini tüm kaynak aramaları için geçersiz kılar.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -83,9 +83,9 @@ namespace BingDuvarKagidi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap Avusturalya_icon {
+        internal static System.Drawing.Bitmap Avustralya_icon {
             get {
-                object obj = ResourceManager.GetObject("Avusturalya_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Avustralya_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,19 +153,9 @@ namespace BingDuvarKagidi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap Türkiye_icon {
+        internal static System.Drawing.Bitmap Turkiye_icon {
             get {
-                object obj = ResourceManager.GetObject("Türkiye_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap Yeni_Zelanda_icon {
-            get {
-                object obj = ResourceManager.GetObject("Yeni_Zelanda_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Turkiye_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,10 +10,14 @@ namespace BingDuvarKagidi.Formlar
             InitializeComponent();
         }
 
-        private void llblHakkinda_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LblHakkinda_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Umutd.com anasayfasına dallan
-            Process.Start(@"https://www.umutd.com");
+            Process.Start(@"https://umutd.com");
+        }
+
+        private void FrmHakkinda_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
