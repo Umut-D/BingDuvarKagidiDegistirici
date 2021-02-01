@@ -42,9 +42,9 @@
             this.lblProgramAdi.Font = new System.Drawing.Font("Calibri", 9.969231F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProgramAdi.Location = new System.Drawing.Point(106, 12);
             this.lblProgramAdi.Name = "lblProgramAdi";
-            this.lblProgramAdi.Size = new System.Drawing.Size(273, 23);
+            this.lblProgramAdi.Size = new System.Drawing.Size(261, 23);
             this.lblProgramAdi.TabIndex = 0;
-            this.lblProgramAdi.Text = "Bing Duvar Kağıdı Değiştirici (2.3)\r\n";
+            this.lblProgramAdi.Text = "Bing Duvar Kağıdı Değiştirici 2.4\r\n";
             // 
             // lblBilgi
             // 
@@ -64,7 +64,7 @@
             this.lblAltBilgi.Size = new System.Drawing.Size(461, 28);
             this.lblAltBilgi.TabIndex = 5;
             this.lblAltBilgi.TabStop = true;
-            this.lblAltBilgi.Text = "Umut D. | Açık kaynak lisanslı (MIT) olarak yazılmıştır | 2020";
+            this.lblAltBilgi.Text = "Umut D. | Açık kaynak lisanslı (MIT) olarak yazılmıştır | 2021";
             this.lblAltBilgi.UseCompatibleTextRendering = true;
             this.lblAltBilgi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblHakkinda_LinkClicked);
             // 

@@ -8,28 +8,34 @@ namespace BingDuvarKagidi.Siniflar
 {
     public class Guncelle
     {
-        public void Kontrol()
+        private readonly Baglanti _baglanti;
+
+        public Guncelle(Baglanti baglanti)
         {
-            try
-            {
-                XmlOku();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show(@"Bağlantı sağlanırken istenmeyen bir hata meydana geldi. İnternet bağlantınızı kontrol etseniz iyi olur.", @"Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            _baglanti = baglanti;
         }
 
-        private void XmlOku()
+        public void VersiyonKontroluYap()
+        {
+            if (_baglanti.InternetVarMi())
+                WebXmlBaglanti();
+        }
+
+        private void WebXmlBaglanti()
         {
             string guncellemeLinki = @"https://raw.githubusercontent.com/Umut-D/umutd.com/master/assets/program-versions/bing-duvar-kagidi-degistirici.xml";
 
             WebClient webIstemcisi = new WebClient();
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType) 3072;
             XmlReader xmlOku = XmlReader.Create(webIstemcisi.OpenRead(guncellemeLinki) ?? throw new InvalidOperationException());
 
+            WebXmlOku(xmlOku);
+        }
+
+        private void WebXmlOku(XmlReader xmlOku)
+        {
             while (xmlOku.Read())
             {
-                // XML dosyasında bing kelimesiyle baslayan alan bulunmazsa okuma yapma
                 if (xmlOku.NodeType != XmlNodeType.Element || xmlOku.Name != "bing" || !xmlOku.HasAttributes)
                     continue;
 
@@ -39,16 +45,14 @@ namespace BingDuvarKagidi.Siniflar
 
         private void VersiyonKarsilastir(XmlReader xmlOku)
         {
-            // TODO Her yeni versiyonda bu alan ve sunucudaki XML dosyası güncellecek
-            string versiyon = "2.3";
+            string guncelVersiyon = "2.4";
             string sunucudakiVersiyon = xmlOku.GetAttribute("version");
 
-            if (sunucudakiVersiyon == versiyon)
+            if (guncelVersiyon == sunucudakiVersiyon)
                 MessageBox.Show(@"Program günceldir. Yeni versiyon çıkana kadar şimdilik en iyisi bu.", @"Güncelle", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                DialogResult guncelleDiyalog = MessageBox.Show(@"Yeni bir güncelleme var. Programı " + sunucudakiVersiyon + @" versiyonuna yükselttim. Yenilikler var. Web sayfasına girip indirmek ister misiniz?",
-                    @"Güncelle", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                DialogResult guncelleDiyalog = MessageBox.Show(@"Yeni bir güncelleme var. Programı " + sunucudakiVersiyon + @" versiyonuna yükselttim. Yenilikler var. Web sayfasına girip indirmek ister misiniz?", @"Güncelle", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                 if (guncelleDiyalog == DialogResult.OK)
                     Process.Start("http://www.umutd.com/programlar/bing-duvar-kagidi-degistirici");

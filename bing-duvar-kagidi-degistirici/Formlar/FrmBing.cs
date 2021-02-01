@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 using BingDuvarKagidi.Properties;
 using BingDuvarKagidi.Siniflar;
@@ -8,41 +9,133 @@ namespace BingDuvarKagidi.Formlar
 {
     public partial class FrmBing : Form
     {
+        private readonly Baglanti _baglanti;
+        private readonly Gorsel _gorsel;
+        private readonly Dosya _dosya;
+        private int _ayar;
+
         public FrmBing()
         {
             InitializeComponent();
-        }
 
-        private readonly Indir _indir = new Indir();
-        private int _ayar;
+            _baglanti = new Baglanti();
+            _gorsel = new Gorsel();
+            _dosya = new Dosya(_gorsel);
+        }
 
         private void FrmBing_Load(object sender, EventArgs e)
         {
-            // Ayarlardan hangi ülkenin seçili olduğunu belirle
+            _baglanti.InternetVarMi();
+
+            Yukle();
+        }
+
+        private void Yukle()
+        {
+            SeciliUlkeyiDropDownListesineEkle();
+            IndirVeGoruntule();
+            SeciliUlkeAdiniMenuyeEkle();
+        }
+
+        private void SeciliUlkeyiDropDownListesineEkle()
+        {
             _ayar = (int) Settings.Default["Ulke"];
 
-            Ulke();
-            Indir();
-            BingeGit();
+            tsmiSeciliUlke.Text = tsmiSeciliUlke.DropDownItems[_ayar].Text;
+            tsmiSeciliUlke.Image = tsmiSeciliUlke.DropDownItems[_ayar].Image;
+        }
+
+        private void IndirVeGoruntule()
+        {
+            Cozunurluk cozunurluk = new Cozunurluk();
+            _gorsel.WebSayfasiniIndir(cozunurluk.EkranCozunurlukEki, tsmiSeciliUlke.Text);
+
+            _dosya.Kaydet();
+
+            pbox.Image = _gorsel.Yukle();
+
+            tssDurum.Text = _gorsel.Bilgi;
+            tsmiDuvarKagidi.Enabled = true;
+        }
+
+        private void SeciliUlkeAdiniMenuyeEkle()
+        {
+            tsmBing.Text = $@"{tsmiSeciliUlke.Text} Bing.com'a Git";
         }
 
         private void TsmiDuvarKagidi_Click(object sender, EventArgs e)
         {
-            Degistir();
+            DuvarKagidi duvarKagidi = new DuvarKagidi();
+            duvarKagidi.Olustur(_dosya.DosyaYoluVeAdi, DuvarKagidi.EkranKonumu.Uzat);
+
+            notifyIcon.BalloonTipText = _gorsel.Bilgi;
+            notifyIcon.ShowBalloonTip(2500);
         }
 
         private void TsmiSeciliUlke_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             tsmiSeciliUlke.Text = e.ClickedItem.Text;
 
-            ToolStripMenuItem tiklananIndeks = (ToolStripMenuItem)sender;
-            _ayar = tiklananIndeks.DropDownItems.IndexOf(e.ClickedItem);
+            ToolStripMenuItem indeks = (ToolStripMenuItem) sender;
+            _ayar = indeks.DropDownItems.IndexOf(e.ClickedItem);
 
-            Gorseller gorseller = new Gorseller();
-            tsmiSeciliUlke.Image = gorseller.Ulke(tsmiSeciliUlke);
+            tsmiSeciliUlke.Image = UlkeIkonuEkle(tsmiSeciliUlke);
 
-            BingeGit();
-            Indir();
+            SeciliUlkeAdiniMenuyeEkle();
+            IndirVeGoruntule();
+        }
+
+        public Image UlkeIkonuEkle(ToolStripMenuItem tsmiUlke)
+        {
+            string seciliUlke = tsmiUlke.Text + "_icon";
+            return (Image) Resources.ResourceManager.GetObject(seciliUlke);
+        }
+
+        private void BtnIleri_Click(object sender, EventArgs e)
+        {
+            _ayar++;
+            if (_ayar == 10)
+                _ayar = 9;
+
+            Yukle();
+        }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            _ayar--;
+            if (_ayar == -1)
+                _ayar = 0;
+
+            Yukle();
+        }
+
+        private void TsmBing_Click(object sender, EventArgs e)
+        {
+            Ulke ulke = new Ulke(tsmiSeciliUlke.Text);
+            Process.Start(ulke.BingWebAdresi);
+        }
+
+        private void TsmGuncelle_Click(object sender, EventArgs e)
+        {
+            Guncelle guncelle = new Guncelle(_baglanti);
+            guncelle.VersiyonKontroluYap();
+        }
+
+        private void TsmHakkinda_Click(object sender, EventArgs e)
+        {
+            FrmHakkinda frmHakkinda = new FrmHakkinda(_baglanti);
+            frmHakkinda.ShowDialog();
+        }
+
+        private void FrmBing_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default["Ulke"] = _ayar;
+            Settings.Default.Save();
+        }
+
+        private void CmsKapat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void FrmBing_Resize(object sender, EventArgs e)
@@ -77,58 +170,6 @@ namespace BingDuvarKagidi.Formlar
             WindowState = FormWindowState.Normal;
         }
 
-        private void CmsKapat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void TsmBing_Click(object sender, EventArgs e)
-        {
-            string seciliUlke = tsmiSeciliUlke.Text;
-            Process.Start(_indir.Adres(seciliUlke));
-        }
-
-        private void TsmGuncelle_Click(object sender, EventArgs e)
-        {
-            Guncelle guncelle = new Guncelle();
-            guncelle.Kontrol();
-        }
-
-        private void TsmHakkinda_Click(object sender, EventArgs e)
-        {
-            FrmHakkinda frmHakkinda = new FrmHakkinda();
-            frmHakkinda.ShowDialog();
-        }
-
-        private void FrmBing_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Seçili ülkenin ayarını kaydederek çıkış yap
-            Settings.Default["Ulke"] = _ayar;
-            Settings.Default.Save();
-        }
-
-        private void BtnIleri_Click(object sender, EventArgs e)
-        {
-            _ayar++;
-            if (_ayar == 10)
-                _ayar = 9;
-
-            Ulke();
-            Indir();
-            BingeGit();
-        }
-
-        private void BtnGeri_Click(object sender, EventArgs e)
-        {
-            _ayar--;
-            if (_ayar == -1)
-                _ayar = 0;
-
-            Ulke();
-            Indir();
-            BingeGit();
-        }
-
         // ProcessCmdKey'i ezme sayesinde sağ ve sol oka basılarak görseller ileri-geri götürülebiliyor
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -143,36 +184,6 @@ namespace BingDuvarKagidi.Formlar
             }
 
             return base.ProcessCmdKey(ref msg, keyData);
-        }
-
-        private void Ulke()
-        {
-            tsmiSeciliUlke.Text = tsmiSeciliUlke.DropDownItems[_ayar].Text;
-            tsmiSeciliUlke.Image = tsmiSeciliUlke.DropDownItems[_ayar].Image;
-        }
-
-        private void Indir()
-        {
-            Cozunurluk cozunurluk = new Cozunurluk();
-            _indir.Yukle(cozunurluk.Bul(), tsmiSeciliUlke.Text);
-
-            tssDurum.Text = _indir.DuzenliBilgi;
-            tsmiDuvarKagidi.Enabled = true;
-        }
-
-        private void Degistir()
-        {
-            DuvarKagidi duvarKagidi = new DuvarKagidi();
-            Uri adres = new Uri(_indir.DosyaAdresi);
-            duvarKagidi.Olustur(adres, DuvarKagidi.EkranKonumu.Uzat);
-
-            notifyIcon.BalloonTipText = _indir.DuzenliBilgi;
-            notifyIcon.ShowBalloonTip(2500);
-        }
-
-        private void BingeGit()
-        {
-            tsmBing.Text = tsmiSeciliUlke.Text + @" Bing.com'a Git";
         }
     }
 }

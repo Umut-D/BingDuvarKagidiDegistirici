@@ -1,9 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Net;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
 namespace BingDuvarKagidi.Siniflar
@@ -27,7 +22,6 @@ namespace BingDuvarKagidi.Siniflar
 
         private void EkranRegistry(EkranKonumu ekranKonumu)
         {
-            // Regedit'te Ekran Konumu ile ilgili ayarı açıp okuma yap
             RegistryKey anahtar = Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true);
 
             switch (ekranKonumu)
@@ -47,26 +41,10 @@ namespace BingDuvarKagidi.Siniflar
             }
         }
 
-        private string GeciciGorsel(Stream webAkis)
+        public void Olustur(string dosya, EkranKonumu ekranKonumu)
         {
-            Image bingGorsel = Image.FromStream(webAkis);
-            string geciciDizin = Path.Combine(Path.GetTempPath(), "BingWP.bmp");
-            bingGorsel.Save(geciciDizin, ImageFormat.Bmp);
-
-            return geciciDizin;
-        }
-
-        public void Olustur(Uri adres, EkranKonumu ekranKonumu)
-        {
-            using (WebClient webBaglanti = new WebClient())
-            {
-                Stream webAkis = webBaglanti.OpenRead(adres);
-
-                EkranRegistry(ekranKonumu);
-                SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, GeciciGorsel(webAkis), SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
-
-                webAkis?.Dispose();
-            }
+            EkranRegistry(ekranKonumu);
+            SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, dosya, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
         }
     }
 }

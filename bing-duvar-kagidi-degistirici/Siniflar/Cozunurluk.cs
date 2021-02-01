@@ -6,9 +6,26 @@ namespace BingDuvarKagidi.Siniflar
 {
     public class Cozunurluk
     {
-        private string MevcutCozunurluk { get; set; }
+        public string EkranCozunurlukEki { get; private set; }
 
-        private Dictionary<int, string> Cozunurlukler()
+        public Cozunurluk()
+        {
+            Bul();
+        }
+
+        private void Bul()
+        {
+            Rectangle ekranSinirlari = Screen.PrimaryScreen.Bounds;
+            foreach (var cozunurluk in Olculer())
+            {
+                if (cozunurluk.Key == ekranSinirlari.Width){
+                    EkranCozunurlukEki = cozunurluk.Value;
+                    return;
+                }
+            }
+        }
+
+        private Dictionary<int, string> Olculer()
         {
             Dictionary<int, string> cozunurlukler = new Dictionary<int, string>
             {
@@ -21,18 +38,6 @@ namespace BingDuvarKagidi.Siniflar
             };
 
             return cozunurlukler;
-        }
-
-        public string Bul()
-        {
-            Rectangle ekran = Screen.PrimaryScreen.Bounds;
-            foreach (KeyValuePair<int, string> cozunurluk in Cozunurlukler())
-            {
-                if (cozunurluk.Key == ekran.Width)
-                    MevcutCozunurluk = cozunurluk.Value;
-            }
-
-            return MevcutCozunurluk;
         }
     }
 }

@@ -26,7 +26,7 @@
     <ProductName>Bing Duvar Kağıdı Değiştiricisi 2.1</ProductName>
     <PublisherName>Umut D.</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.1.3.0</ApplicationVersion>
+    <ApplicationVersion>2.4.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -92,7 +92,9 @@
     <Compile Include="Formlar\Hakkinda.Designer.cs">
       <DependentUpon>Hakkinda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siniflar\WebSiteleri.cs" />
+    <Compile Include="Siniflar\Dosya.cs" />
+    <Compile Include="Siniflar\Link.cs" />
+    <Compile Include="Siniflar\Ulke.cs" />
     <Compile Include="Siniflar\Cozunurluk.cs" />
     <Compile Include="Siniflar\Guncelle.cs" />
     <Compile Include="Siniflar\Baglanti.cs" />
@@ -105,8 +107,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Siniflar\Indir.cs" />
-    <Compile Include="Siniflar\Gorseller.cs" />
+    <Compile Include="Siniflar\Gorsel.cs" />
     <EmbeddedResource Include="Formlar\FrmBing.resx">
       <DependentUpon>FrmBing.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,7 +126,6 @@
     </Compile>
     <None Include="app.config" />
     <None Include="app.manifest" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
