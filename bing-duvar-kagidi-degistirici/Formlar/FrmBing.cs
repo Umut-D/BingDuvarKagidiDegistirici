@@ -91,24 +91,6 @@ namespace BingDuvarKagidi.Formlar
             return (Image) Resources.ResourceManager.GetObject(seciliUlke);
         }
 
-        private void BtnIleri_Click(object sender, EventArgs e)
-        {
-            _ayar++;
-            if (_ayar == 10)
-                _ayar = 9;
-
-            Yukle();
-        }
-
-        private void BtnGeri_Click(object sender, EventArgs e)
-        {
-            _ayar--;
-            if (_ayar == -1)
-                _ayar = 0;
-
-            Yukle();
-        }
-
         private void TsmBing_Click(object sender, EventArgs e)
         {
             Ulke ulke = new Ulke(tsmiSeciliUlke.Text);
@@ -168,22 +150,6 @@ namespace BingDuvarKagidi.Formlar
         {
             Show();
             WindowState = FormWindowState.Normal;
-        }
-
-        // ProcessCmdKey'i ezme sayesinde sağ ve sol oka basılarak görseller ileri-geri götürülebiliyor
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            switch (keyData)
-            {
-                case Keys.Right:
-                    BtnIleri_Click(null, null);
-                    return true;
-                case Keys.Left:
-                    BtnGeri_Click(null, null);
-                    return true;
-            }
-
-            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

@@ -54,8 +54,6 @@
             this.cmsGoster = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsKapat = new System.Windows.Forms.ToolStripMenuItem();
             this.pbox = new System.Windows.Forms.PictureBox();
-            this.btnIleri = new System.Windows.Forms.Button();
-            this.btnGeri = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip.SuspendLayout();
@@ -211,16 +209,16 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(22, 22);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssDurum});
-            this.statusStrip.Location = new System.Drawing.Point(0, 574);
+            this.statusStrip.Location = new System.Drawing.Point(0, 569);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1002, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1002, 27);
             this.statusStrip.TabIndex = 2;
             // 
             // tssDurum
             // 
             this.tssDurum.Name = "tssDurum";
-            this.tssDurum.Size = new System.Drawing.Size(0, 15);
+            this.tssDurum.Size = new System.Drawing.Size(0, 20);
             // 
             // notifyIcon
             // 
@@ -266,37 +264,11 @@
             this.pbox.TabIndex = 1;
             this.pbox.TabStop = false;
             // 
-            // btnIleri
-            // 
-            this.btnIleri.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnIleri.Font = new System.Drawing.Font("Calibri", 8.059701F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnIleri.Location = new System.Drawing.Point(945, 290);
-            this.btnIleri.Name = "btnIleri";
-            this.btnIleri.Size = new System.Drawing.Size(45, 26);
-            this.btnIleri.TabIndex = 3;
-            this.btnIleri.Text = ">>";
-            this.btnIleri.UseVisualStyleBackColor = true;
-            this.btnIleri.Click += new System.EventHandler(this.BtnIleri_Click);
-            // 
-            // btnGeri
-            // 
-            this.btnGeri.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnGeri.Font = new System.Drawing.Font("Calibri", 8.059701F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeri.Location = new System.Drawing.Point(12, 281);
-            this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(45, 26);
-            this.btnGeri.TabIndex = 3;
-            this.btnGeri.Text = "<<";
-            this.btnGeri.UseVisualStyleBackColor = true;
-            this.btnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
-            // 
             // FrmBing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 596);
-            this.Controls.Add(this.btnGeri);
-            this.Controls.Add(this.btnIleri);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.pbox);
             this.Controls.Add(this.menuStrip);
@@ -348,8 +320,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiJaponya;
         private System.Windows.Forms.ToolStripMenuItem tsmiKanada;
         private System.Windows.Forms.ToolStripMenuItem tsmiTurkiye;
-        private System.Windows.Forms.Button btnIleri;
-        private System.Windows.Forms.Button btnGeri;
     }
 }
 

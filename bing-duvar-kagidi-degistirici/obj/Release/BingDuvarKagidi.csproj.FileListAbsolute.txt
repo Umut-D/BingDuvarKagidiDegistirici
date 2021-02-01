@@ -19,3 +19,4 @@ D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-ka
 D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\BingDuvarKagidi.csproj.CoreCompileInputs.cache
 D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\BingDuvarKagidi.exe
 D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\BingDuvarKagidi.pdb
+D:\Belgelerim\Programlar\C#\+ Github\Bing-Duvar-Kagidi-Degistirici\bing-duvar-kagidi-degistirici\obj\Release\BingDuvarKagidi.csprojAssemblyReference.cache
