@@ -26,7 +26,7 @@
     <ProductName>Bing Duvar Kağıdı Değiştiricisi 2.1</ProductName>
     <PublisherName>Umut D.</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.4.0.0</ApplicationVersion>
+    <ApplicationVersion>2.4.1.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -86,32 +86,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formlar\Hakkinda.cs">
+    <Compile Include="Hakkinda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\Hakkinda.Designer.cs">
+    <Compile Include="Hakkinda.Designer.cs">
       <DependentUpon>Hakkinda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siniflar\Dosya.cs" />
-    <Compile Include="Siniflar\Link.cs" />
-    <Compile Include="Siniflar\Ulke.cs" />
-    <Compile Include="Siniflar\Cozunurluk.cs" />
-    <Compile Include="Siniflar\Guncelle.cs" />
-    <Compile Include="Siniflar\Baglanti.cs" />
-    <Compile Include="Siniflar\DuvarKagidi.cs" />
-    <Compile Include="Formlar\FrmBing.cs">
+    <Compile Include="FrmBing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmBing.Designer.cs">
+    <Compile Include="FrmBing.Designer.cs">
       <DependentUpon>FrmBing.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Siniflar\Gorsel.cs" />
-    <EmbeddedResource Include="Formlar\FrmBing.resx">
+    <EmbeddedResource Include="FrmBing.resx">
       <DependentUpon>FrmBing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\Hakkinda.resx">
+    <EmbeddedResource Include="Hakkinda.resx">
       <DependentUpon>Hakkinda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -136,7 +128,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Siniflar\Siniflar.csproj">
+      <Project>{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}</Project>
+      <Name>Siniflar</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Yeni Zelanda-icon.png" />
     <None Include="Resources\Türkiye-icon.png" />
@@ -170,6 +167,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

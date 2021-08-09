@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // Değerlerin tümünü belirtebilir ya da Yapı ve Düzeltme Numaralarını aşağıda gösterildiği gibi 
 // '*' kullanarak varsayılana ayarlayabilirsiniz:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.4.0.0")]
-[assembly: AssemblyFileVersion("2.4.0.0")]
+[assembly: AssemblyVersion("2.4.1.0")]
+[assembly: AssemblyFileVersion("2.4.1.0")]

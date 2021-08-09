@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingDuvarKagidi", "bing-duvar-kagidi-degistirici\BingDuvarKagidi.csproj", "{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siniflar", "Siniflar\Siniflar.csproj", "{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,19 @@ Global
 		{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}.Release|x86.ActiveCfg = Release|x86
 		{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}.Release|x86.Build.0 = Release|x86
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Debug|x86.Build.0 = Debug|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Release|x86.ActiveCfg = Release|Any CPU
+		{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB780676-FBE1-421F-B20C-24C0C95868EB}
 	EndGlobalSection
 EndGlobal
