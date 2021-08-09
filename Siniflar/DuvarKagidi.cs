@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace Siniflar
+namespace BingDuvarKagidiLibrary
 {
     public class DuvarKagidi
     {

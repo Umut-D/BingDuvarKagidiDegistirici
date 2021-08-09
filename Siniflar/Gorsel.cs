@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net;
 
-namespace Siniflar
+namespace BingDuvarKagidiLibrary
 {
     public class Gorsel
     {

@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace BingDuvarKagidi
+namespace BingDuvarKagidiUI
 {
     internal static class Program
     {

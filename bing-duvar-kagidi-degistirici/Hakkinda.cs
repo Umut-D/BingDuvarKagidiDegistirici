@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Windows.Forms;
-using Siniflar;
+using BingDuvarKagidiLibrary;
 
-namespace BingDuvarKagidi
+namespace BingDuvarKagidiUI
 {
     public partial class FrmHakkinda : Form
     {

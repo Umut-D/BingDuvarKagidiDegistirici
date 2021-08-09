@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Siniflar
+namespace BingDuvarKagidiLibrary
 {
     public class Cozunurluk
     {

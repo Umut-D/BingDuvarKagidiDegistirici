@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Windows.Forms;
 
-namespace Siniflar
+namespace BingDuvarKagidiLibrary
 {
     public class Baglanti
     {

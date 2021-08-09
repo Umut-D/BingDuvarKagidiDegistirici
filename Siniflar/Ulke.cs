@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Siniflar
+namespace BingDuvarKagidiLibrary
 {
     public class Ulke
     {

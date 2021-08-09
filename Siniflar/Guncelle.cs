@@ -4,7 +4,7 @@ using System.Net;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Siniflar
+namespace BingDuvarKagidiLibrary
 {
     public class Guncelle
     {
