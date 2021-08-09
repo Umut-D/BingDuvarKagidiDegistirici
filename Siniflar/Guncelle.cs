@@ -45,7 +45,7 @@ namespace Siniflar
 
         private void VersiyonKarsilastir(XmlReader xmlOku)
         {
-            string guncelVersiyon = "2.4";
+            string guncelVersiyon = "2.41";
             string sunucudakiVersiyon = xmlOku.GetAttribute("version");
 
             if (guncelVersiyon == sunucudakiVersiyon)
