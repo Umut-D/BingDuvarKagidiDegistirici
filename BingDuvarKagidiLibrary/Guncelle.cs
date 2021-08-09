@@ -45,7 +45,7 @@ namespace BingDuvarKagidiLibrary
 
         private void VersiyonKarsilastir(XmlReader xmlOku)
         {
-            string guncelVersiyon = "2.41";
+            string guncelVersiyon = "2.42";
             string sunucudakiVersiyon = xmlOku.GetAttribute("version");
 
             if (guncelVersiyon == sunucudakiVersiyon)
