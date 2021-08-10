@@ -7,8 +7,8 @@
     <ProjectGuid>{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BingDuvarKagidiLibrary</RootNamespace>
-    <AssemblyName>BingCore</AssemblyName>
+    <RootNamespace>BingLibrary</RootNamespace>
+    <AssemblyName>BingLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

@@ -44,7 +44,7 @@
             this.lblProgramAdi.Name = "lblProgramAdi";
             this.lblProgramAdi.Size = new System.Drawing.Size(271, 23);
             this.lblProgramAdi.TabIndex = 0;
-            this.lblProgramAdi.Text = "Bing Duvar Kağıdı Değiştirici 2.42\r\n";
+            this.lblProgramAdi.Text = "Bing Duvar Kağıdı Değiştirici 2.43\r\n";
             // 
             // lblBilgi
             // 

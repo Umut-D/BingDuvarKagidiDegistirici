@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingDuvarKagidiLibrary", "BingDuvarKagidiLibrary\BingDuvarKagidiLibrary.csproj", "{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingLibrary", "BingDuvarKagidiLibrary\BingLibrary.csproj", "{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingDuvarKagidiUI", "BingDuvarKagidiUI\BingDuvarKagidiUI.csproj", "{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingUI", "BingDuvarKagidiUI\BingUI.csproj", "{69DC7BAE-8E22-46EF-9F15-5F49696EBA24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
