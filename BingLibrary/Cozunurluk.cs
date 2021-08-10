@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace BingDuvarKagidiLibrary
+namespace BingLibrary
 {
     public class Cozunurluk
     {

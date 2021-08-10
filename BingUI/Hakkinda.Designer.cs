@@ -1,4 +1,4 @@
-﻿namespace BingDuvarKagidiUI
+﻿namespace BingUI
 {
     partial class FrmHakkinda
     {

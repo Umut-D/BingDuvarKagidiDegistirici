@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace BingDuvarKagidiLibrary
+namespace BingLibrary
 {
     public class DuvarKagidi
     {

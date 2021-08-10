@@ -1,4 +1,4 @@
-﻿namespace BingDuvarKagidiUI
+﻿namespace BingUI
 {
     partial class FrmBing
     {
@@ -135,70 +135,70 @@
             // 
             // tsmiAlmanya
             // 
-            this.tsmiAlmanya.Image = global::BingDuvarKagidiUI.Properties.Resources.Almanya_icon;
+            this.tsmiAlmanya.Image = global::BingUI.Properties.Resources.Almanya_icon;
             this.tsmiAlmanya.Name = "tsmiAlmanya";
             this.tsmiAlmanya.Size = new System.Drawing.Size(189, 30);
             this.tsmiAlmanya.Text = "Almanya";
             // 
             // tsmiAmerika
             // 
-            this.tsmiAmerika.Image = global::BingDuvarKagidiUI.Properties.Resources.Amerika_icon;
+            this.tsmiAmerika.Image = global::BingUI.Properties.Resources.Amerika_icon;
             this.tsmiAmerika.Name = "tsmiAmerika";
             this.tsmiAmerika.Size = new System.Drawing.Size(189, 30);
             this.tsmiAmerika.Text = "Amerika";
             // 
             // tsmiAvustralya
             // 
-            this.tsmiAvustralya.Image = global::BingDuvarKagidiUI.Properties.Resources.Avustralya_icon;
+            this.tsmiAvustralya.Image = global::BingUI.Properties.Resources.Avustralya_icon;
             this.tsmiAvustralya.Name = "tsmiAvustralya";
             this.tsmiAvustralya.Size = new System.Drawing.Size(189, 30);
             this.tsmiAvustralya.Text = "Avustralya";
             // 
             // tsmiBrezilya
             // 
-            this.tsmiBrezilya.Image = global::BingDuvarKagidiUI.Properties.Resources.Brezilya_icon;
+            this.tsmiBrezilya.Image = global::BingUI.Properties.Resources.Brezilya_icon;
             this.tsmiBrezilya.Name = "tsmiBrezilya";
             this.tsmiBrezilya.Size = new System.Drawing.Size(189, 30);
             this.tsmiBrezilya.Text = "Brezilya";
             // 
             // tsmiBritanya
             // 
-            this.tsmiBritanya.Image = global::BingDuvarKagidiUI.Properties.Resources.Britanya_icon;
+            this.tsmiBritanya.Image = global::BingUI.Properties.Resources.Britanya_icon;
             this.tsmiBritanya.Name = "tsmiBritanya";
             this.tsmiBritanya.Size = new System.Drawing.Size(189, 30);
             this.tsmiBritanya.Text = "Britanya";
             // 
             // tsmiFransa
             // 
-            this.tsmiFransa.Image = global::BingDuvarKagidiUI.Properties.Resources.Fransa_icon;
+            this.tsmiFransa.Image = global::BingUI.Properties.Resources.Fransa_icon;
             this.tsmiFransa.Name = "tsmiFransa";
             this.tsmiFransa.Size = new System.Drawing.Size(189, 30);
             this.tsmiFransa.Text = "Fransa";
             // 
             // tsmiHindistan
             // 
-            this.tsmiHindistan.Image = global::BingDuvarKagidiUI.Properties.Resources.Hindistan_icon;
+            this.tsmiHindistan.Image = global::BingUI.Properties.Resources.Hindistan_icon;
             this.tsmiHindistan.Name = "tsmiHindistan";
             this.tsmiHindistan.Size = new System.Drawing.Size(189, 30);
             this.tsmiHindistan.Text = "Hindistan";
             // 
             // tsmiJaponya
             // 
-            this.tsmiJaponya.Image = global::BingDuvarKagidiUI.Properties.Resources.Japonya_icon;
+            this.tsmiJaponya.Image = global::BingUI.Properties.Resources.Japonya_icon;
             this.tsmiJaponya.Name = "tsmiJaponya";
             this.tsmiJaponya.Size = new System.Drawing.Size(189, 30);
             this.tsmiJaponya.Text = "Japonya";
             // 
             // tsmiKanada
             // 
-            this.tsmiKanada.Image = global::BingDuvarKagidiUI.Properties.Resources.Kanada_icon;
+            this.tsmiKanada.Image = global::BingUI.Properties.Resources.Kanada_icon;
             this.tsmiKanada.Name = "tsmiKanada";
             this.tsmiKanada.Size = new System.Drawing.Size(189, 30);
             this.tsmiKanada.Text = "Kanada";
             // 
             // tsmiTurkiye
             // 
-            this.tsmiTurkiye.Image = global::BingDuvarKagidiUI.Properties.Resources.Turkiye_icon;
+            this.tsmiTurkiye.Image = global::BingUI.Properties.Resources.Turkiye_icon;
             this.tsmiTurkiye.Name = "tsmiTurkiye";
             this.tsmiTurkiye.Size = new System.Drawing.Size(189, 30);
             this.tsmiTurkiye.Text = "Turkiye";

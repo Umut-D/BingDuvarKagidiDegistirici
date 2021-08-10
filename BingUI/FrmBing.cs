@@ -2,10 +2,10 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using BingDuvarKagidiLibrary;
-using BingDuvarKagidiUI.Properties;
+using BingLibrary;
+using BingUI.Properties;
 
-namespace BingDuvarKagidiUI
+namespace BingUI
 {
     public partial class FrmBing : Form
     {

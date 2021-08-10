@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace BingDuvarKagidiLibrary
+namespace BingLibrary
 {
     public class Link
     {

@@ -129,12 +129,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BingDuvarKagidiLibrary\BingLibrary.csproj">
-      <Project>{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}</Project>
-      <Name>BingLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Yeni Zelanda-icon.png" />
     <None Include="Resources\Türkiye-icon.png" />
     <None Include="Resources\Kanada-icon.png" />
@@ -166,7 +160,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BingLibrary\BingLibrary.csproj">
+      <Project>{E0FC54FF-4899-4749-9A4E-8F84346BCE0F}</Project>
+      <Name>BingLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
