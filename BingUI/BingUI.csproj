@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <RootNamespace>BingUI</RootNamespace>
+        <AssemblyName>Bing Duvar Kagidi Degistirici</AssemblyName>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <ApplicationIcon>Resources\bing-icon.ico</ApplicationIcon>
+        <Version>3.0.0</Version>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <FileVersion>3.0.0.0</FileVersion>
+        <Product>Bing Duvar Kağıdı Değiştirici</Product>
+        <Authors>Umut D.</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="app.manifest" />
+        <None Include="Resources\Yeni Zelanda-icon.png" />
+        <None Include="Resources\Türkiye-icon.png" />
+        <None Include="Resources\Kanada-icon.png" />
+        <None Include="Resources\Japonya-icon.png" />
+        <None Include="Resources\Hindistan-icon.png" />
+        <None Include="Resources\Fransa-icon.png" />
+        <None Include="Resources\Britanya-icon.png" />
+        <None Include="Resources\Brezilya-icon.png" />
+        <None Include="Resources\bing-about-icon.png" />
+        <None Include="Resources\Almanya-icon.png" />
+        <None Include="Resources\Amerika-icon.png" />
+        <None Include="Resources\Avusturalya-icon.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Resources\bing-icon.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\BingLibrary\BingLibrary.csproj" />
+    </ItemGroup>
+
+</Project>
+

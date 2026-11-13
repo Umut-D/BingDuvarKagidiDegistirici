@@ -1,0 +1,34 @@
+name: Windows CI ve Güvenlik Kontrolü
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Depoyu İndir
+        uses: actions/checkout@v4
+
+      - name: .NET 10 SDK Kur
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Bağımlılıkları Yükle (Restore)
+        run: dotnet restore BingDuvarKagidiDegistirici.sln
+
+      - name: NuGet Güvenlik Açığı Taraması
+        run: dotnet list BingDuvarKagidiDegistirici.sln package --vulnerable --include-transitive
+
+      - name: Debug ve Release Derleme
+        run: |
+          dotnet build BingDuvarKagidiDegistirici.sln --configuration Debug --no-restore
+          dotnet build BingDuvarKagidiDegistirici.sln --configuration Release --no-restore
+
+      - name: Birim Testlerini Çalıştır (Canlı Bing Hariç)
+        run: dotnet test BingDuvarKagidiDegistirici.sln --configuration Release --no-build --filter "Category!=LiveSmoke"
